@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:orientation="horizontal"
+    android:id="@+id/gym_details_sheet"
+    android:background="?android:attr/selectableItemBackground"
+    android:paddingTop="4dp"
+    android:clipToPadding="true"
+    android:clickable="true"
+    android:focusable="true">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.3" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="-4dp"
+        android:layout_weight="5"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gym_detail_title_placeholder"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            app:fontFamily="@font/google_product_sans"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:id="@+id/cp_title"
+            android:textColor="#000000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/number_placeholder"
+                android:id="@+id/cp_desc" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/cp_lots_logo"
+                android:layout_marginStart="4dp"
+                app:srcCompat="@drawable/ic_parking" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:id="@+id/cp_lots"
+                android:text="0" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_gravity="center_vertical"
+        app:srcCompat="@drawable/ic_chevron_right" />
+</LinearLayout>

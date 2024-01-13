@@ -1,0 +1,116 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ChatMessage - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">sg.edu.ntu.scse.cz2006.gymbuddies.datastruct</a>&nbsp;/&nbsp;<a href="./index.html">ChatMessage</a><br/>
+<br/>
+<h1>ChatMessage</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ChatMessage</span></code>
+<p>Created by Chia Yu on 22/10/2019. for sg.edu.ntu.scse.cz2006.gymbuddies.datastruct in Gym Buddies! Entity class to hold single chat message between user.</p>
+<p><strong>Author</strong><br/>
+Chia Yu</p>
+<p><strong>Since</strong><br/>
+2019-10-22</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>default constructor</p>
+<code><span class="identifier">ChatMessage</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>alternate constructor</p>
+<code><span class="identifier">ChatMessage</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.ChatMessage$<init>(kotlin.String, kotlin.String, kotlin.Long)/message">message</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.ChatMessage$<init>(kotlin.String, kotlin.String, kotlin.Long)/sender">sender</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.ChatMessage$<init>(kotlin.String, kotlin.String, kotlin.Long)/timestamp">timestamp</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">)</span></code><br/>
+<code><span class="identifier">ChatMessage</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.ChatMessage$<init>(kotlin.String, kotlin.String)/message">message</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.ChatMessage$<init>(kotlin.String, kotlin.String)/sender">sender</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">!</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="message.html">message</a></h4>
+</td>
+<td>
+<p>the message content. It is nullable to denote that message is being deleted</p>
+<code><span class="keyword">var </span><span class="identifier">message</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="sender.html">sender</a></h4>
+</td>
+<td>
+<p>user id of user that send out the message</p>
+<code><span class="keyword">var </span><span class="identifier">sender</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="timestamp.html">timestamp</a></h4>
+</td>
+<td>
+<p>timestamp of message of user send out the message</p>
+<code><span class="keyword">var </span><span class="identifier">timestamp</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="get-message.html">getMessage</a></h4>
+</td>
+<td>
+<p>getter method of <code><a href="message.html">#message</a></code></p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getMessage</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-sender.html">getSender</a></h4>
+</td>
+<td>
+<p>getter method of <code><a href="sender.html">#sender</a></code></p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSender</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-timestamp.html">getTimestamp</a></h4>
+</td>
+<td>
+<p>getter method of <code><a href="timestamp.html">#timestamp</a></code></p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getTimestamp</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-message.html">setMessage</a></h4>
+</td>
+<td>
+<p>setter method of <code><a href="message.html">#message</a></code></p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setMessage</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.ChatMessage$setMessage(kotlin.String)/message">message</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-sender.html">setSender</a></h4>
+</td>
+<td>
+<p>setter method of <code><a href="sender.html">#sender</a></code></p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSender</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.ChatMessage$setSender(kotlin.String)/sender">sender</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-timestamp.html">setTimestamp</a></h4>
+</td>
+<td>
+<p>setter method of <code><a href="timestamp.html">#timestamp</a></code></p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setTimestamp</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.ChatMessage$setTimestamp(kotlin.Long)/timestamp">timestamp</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

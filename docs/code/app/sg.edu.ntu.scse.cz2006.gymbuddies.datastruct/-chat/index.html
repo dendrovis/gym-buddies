@@ -1,0 +1,165 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Chat - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">sg.edu.ntu.scse.cz2006.gymbuddies.datastruct</a>&nbsp;/&nbsp;<a href="./index.html">Chat</a><br/>
+<br/>
+<h1>Chat</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">Chat</span></code>
+<p>Data Structure to store the Chat data in FirebaseFirestore. For sg.edu.ntu.scse.cz2006.gymbuddies.datastruct in Gym Buddies!</p>
+<p><strong>Author</strong><br/>
+Chia Yu</p>
+<p><strong>Since</strong><br/>
+2019-10-22</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>default constructor</p>
+<code><span class="identifier">Chat</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>alternate constructor</p>
+<code><span class="identifier">Chat</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.Chat$<init>(kotlin.String, kotlin.Long, java.util.HashMap((kotlin.String, kotlin.Boolean)))/lastMessage">lastMessage</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.Chat$<init>(kotlin.String, kotlin.Long, java.util.HashMap((kotlin.String, kotlin.Boolean)))/lastUpdate">lastUpdate</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.Chat$<init>(kotlin.String, kotlin.Long, java.util.HashMap((kotlin.String, kotlin.Boolean)))/participant">participant</span><span class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html"><span class="identifier">HashMap</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="chat-id.html">chatId</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">chatId</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="last-message.html">lastMessage</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">lastMessage</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="last-update.html">lastUpdate</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">lastUpdate</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="other-user.html">otherUser</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">otherUser</span><span class="symbol">: </span><a href="../-user/index.html"><span class="identifier">User</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="participant.html">participant</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">participant</span><span class="symbol">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html"><span class="identifier">HashMap</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="get-chat-id.html">getChatId</a></h4>
+</td>
+<td>
+<p>getter method for chat id</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getChatId</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-last-message.html">getLastMessage</a></h4>
+</td>
+<td>
+<p>getter method for last message</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLastMessage</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-last-update.html">getLastUpdate</a></h4>
+</td>
+<td>
+<p>getter method to get last update timestamp</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLastUpdate</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-other-user.html">getOtherUser</a></h4>
+</td>
+<td>
+<p>excluded to save otherUser attribute in FirebaseFirestore</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOtherUser</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-user/index.html"><span class="identifier">User</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-participant.html">getParticipant</a></h4>
+</td>
+<td>
+<p>getter method for member of the chat</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getParticipant</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html"><span class="identifier">HashMap</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-chat-id.html">setChatId</a></h4>
+</td>
+<td>
+<p>setter method for chat id</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setChatId</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.Chat$setChatId(kotlin.String)/chatId">chatId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-last-message.html">setLastMessage</a></h4>
+</td>
+<td>
+<p>setter method for set lastMessage</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setLastMessage</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.Chat$setLastMessage(kotlin.String)/lastMessage">lastMessage</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-last-update.html">setLastUpdate</a></h4>
+</td>
+<td>
+<p>setter method to get last update timestamp</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setLastUpdate</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.Chat$setLastUpdate(kotlin.Long)/lastUpdate">lastUpdate</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-other-user.html">setOtherUser</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setOtherUser</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.Chat$setOtherUser(sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.User)/otherUser">otherUser</span><span class="symbol">:</span>&nbsp;<a href="../-user/index.html"><span class="identifier">User</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-participant.html">setParticipant</a></h4>
+</td>
+<td>
+<p>setter method member of the chat</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setParticipant</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.Chat$setParticipant(java.util.HashMap((kotlin.String, kotlin.Boolean)))/participant">participant</span><span class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html"><span class="identifier">HashMap</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-string.html">toString</a></h4>
+</td>
+<td>
+<p>for display purpose only</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

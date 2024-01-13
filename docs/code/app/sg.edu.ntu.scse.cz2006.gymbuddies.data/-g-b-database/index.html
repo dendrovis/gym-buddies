@@ -1,0 +1,73 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>GBDatabase - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">sg.edu.ntu.scse.cz2006.gymbuddies.data</a>&nbsp;/&nbsp;<a href="./index.html">GBDatabase</a><br/>
+<br/>
+<h1>GBDatabase</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">GBDatabase</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">RoomDatabase</span></code>
+<p>Room database for Gym Buddy app it uses singleton design pattern, it will only create one instance at all time schema information will be exported to '../app/schemas/' whenever database version update</p>
+<p><strong>Author</strong><br/>
+Chia Yu</p>
+<p><strong>Since</strong><br/>
+2019-09-14</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Room database for Gym Buddy app it uses singleton design pattern, it will only create one instance at all time schema information will be exported to '../app/schemas/' whenever database version update</p>
+<code><span class="identifier">GBDatabase</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-f-i-l-e_-d-b_-n-a-m-e.html">FILE_DB_NAME</a></h4>
+</td>
+<td>
+<p>path to asset of pre-populated data</p>
+<code><span class="keyword">static</span> <span class="keyword">var </span><span class="identifier">FILE_DB_NAME</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="instance.html">instance</a></h4>
+</td>
+<td>
+<p>singleton instance for database</p>
+<code><span class="keyword">static</span> <span class="keyword">var </span><span class="identifier">instance</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">GBDatabase</span></a><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="car-park-dao.html">carParkDao</a></h4>
+</td>
+<td>
+<p>abstract getter for Data accessing object</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">carParkDao</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-car-park-dao/index.html"><span class="identifier">CarParkDao</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-instance.html">getInstance</a></h4>
+</td>
+<td>
+<p>Getter method for Gym Buddy database if the room database is not existed, it creates from database file in assets folder</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">getInstance</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.data.GBDatabase$getInstance(android.content.Context)/context">context</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">GBDatabase</span></a><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

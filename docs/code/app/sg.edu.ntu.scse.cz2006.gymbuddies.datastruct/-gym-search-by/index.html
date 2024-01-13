@@ -1,0 +1,94 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>GymSearchBy - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">sg.edu.ntu.scse.cz2006.gymbuddies.datastruct</a>&nbsp;/&nbsp;<a href="./index.html">GymSearchBy</a><br/>
+<br/>
+<h1>GymSearchBy</h1>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">GymSearchBy</span></code>
+<p>Data Structure to store Gym Search Parameters</p>
+<p>Note that in rating, -1 = All, 1-5 is the respective counts</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Gym Search Parameters</p>
+<code><span class="identifier">GymSearchBy</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.GymSearchBy$<init>(kotlin.Int, kotlin.Double, kotlin.Int)/sort">sort</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;SORT_ABC_ASC<span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.GymSearchBy$<init>(kotlin.Int, kotlin.Double, kotlin.Int)/distance">distance</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a>&nbsp;<span class="symbol">=</span>&nbsp;10.0<span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.GymSearchBy$<init>(kotlin.Int, kotlin.Double, kotlin.Int)/rating">rating</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;-1<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="distance.html">distance</a></h4>
+</td>
+<td>
+<p>Double Distance radius around the user</p>
+<code><span class="keyword">val </span><span class="identifier">distance</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="rating.html">rating</a></h4>
+</td>
+<td>
+<p>Int rating selected, will be that rating and greater. -1 for all</p>
+<code><span class="keyword">val </span><span class="identifier">rating</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="sort.html">sort</a></h4>
+</td>
+<td>
+<p>Int Sort val, MUST be <a href="-s-o-r-t_-a-b-c_-a-s-c.html">SORT_ABC_ASC</a>, <a href="-s-o-r-t_-a-b-c_-d-s-c.html">SORT_ABC_DSC</a>, <a href="-s-o-r-t_-f-a-v_-a-s-c.html">SORT_FAV_ASC</a>, <a href="-s-o-r-t_-f-a-v_-d-s-c.html">SORT_FAV_DSC</a></p>
+<code><span class="keyword">val </span><span class="identifier">sort</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-s-o-r-t_-a-b-c_-a-s-c.html">SORT_ABC_ASC</a></h4>
+</td>
+<td>
+<p>Sort gyms by alphabetical ascending order</p>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">SORT_ABC_ASC</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-s-o-r-t_-a-b-c_-d-s-c.html">SORT_ABC_DSC</a></h4>
+</td>
+<td>
+<p>Sort gyms by alphabetical descending order</p>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">SORT_ABC_DSC</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-s-o-r-t_-f-a-v_-a-s-c.html">SORT_FAV_ASC</a></h4>
+</td>
+<td>
+<p>Sort gyms by popularity ascending order</p>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">SORT_FAV_ASC</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-s-o-r-t_-f-a-v_-d-s-c.html">SORT_FAV_DSC</a></h4>
+</td>
+<td>
+<p>Sort gyms by popularity descending order</p>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">SORT_FAV_DSC</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

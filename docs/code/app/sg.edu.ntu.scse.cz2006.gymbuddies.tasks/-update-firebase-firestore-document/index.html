@@ -1,0 +1,108 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>UpdateFirebaseFirestoreDocument - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">sg.edu.ntu.scse.cz2006.gymbuddies.tasks</a>&nbsp;/&nbsp;<a href="./index.html">UpdateFirebaseFirestoreDocument</a><br/>
+<br/>
+<h1>UpdateFirebaseFirestoreDocument</h1>
+<code><span class="keyword">class </span><span class="identifier">UpdateFirebaseFirestoreDocument</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/AsyncTask.html"><span class="identifier">AsyncTask</span></a><span class="symbol">&lt;</span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html"><span class="identifier">Void</span></a><span class="symbol">,</span>&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html"><span class="identifier">Void</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">&gt;</span></code>
+<p>This task handles updating of Firebase Firestore DB user document object in the background
+For sg.edu.ntu.scse.cz2006.gymbuddies.tasks in Gym Buddies!</p>
+<p><strong>Author</strong><br/>
+Kenneth Soh</p>
+<p><strong>Since</strong><br/>
+2019-09-16</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-callback/index.html">Callback</a></h4>
+</td>
+<td>
+<p>Internal interface to handle callbacks</p>
+<code><span class="keyword">interface </span><span class="identifier">Callback</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Initializees the task to execute</p>
+<code><span class="identifier">UpdateFirebaseFirestoreDocument</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.tasks.UpdateFirebaseFirestoreDocument$<init>(com.google.firebase.firestore.DocumentReference, sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.User, sg.edu.ntu.scse.cz2006.gymbuddies.tasks.UpdateFirebaseFirestoreDocument.Callback)/docRef">docRef</span><span class="symbol">:</span>&nbsp;<span class="identifier">DocumentReference</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.tasks.UpdateFirebaseFirestoreDocument$<init>(com.google.firebase.firestore.DocumentReference, sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.User, sg.edu.ntu.scse.cz2006.gymbuddies.tasks.UpdateFirebaseFirestoreDocument.Callback)/userObj">userObj</span><span class="symbol">:</span>&nbsp;<a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-user/index.html"><span class="identifier">User</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.tasks.UpdateFirebaseFirestoreDocument$<init>(com.google.firebase.firestore.DocumentReference, sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.User, sg.edu.ntu.scse.cz2006.gymbuddies.tasks.UpdateFirebaseFirestoreDocument.Callback)/callback">callback</span><span class="symbol">:</span>&nbsp;<span class="identifier">Callback</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="callback.html">callback</a></h4>
+</td>
+<td>
+<p>Callback Callback to call when task completes</p>
+<code><span class="keyword">var </span><span class="identifier">callback</span><span class="symbol">: </span><span class="identifier">Callback</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="doc-ref.html">docRef</a></h4>
+</td>
+<td>
+<p>DocumentReference Document reference in the Firebase Firestore DB</p>
+<code><span class="keyword">var </span><span class="identifier">docRef</span><span class="symbol">: </span><span class="identifier">DocumentReference</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="user-obj.html">userObj</a></h4>
+</td>
+<td>
+<p>User User object to update</p>
+<code><span class="keyword">var </span><span class="identifier">userObj</span><span class="symbol">: </span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-user/index.html"><span class="identifier">User</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="do-in-background.html">doInBackground</a></h4>
+</td>
+<td>
+<p>Internal task to execute in the background on a seperate thread</p>
+<code><span class="keyword">fun </span><span class="identifier">doInBackground</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.tasks.UpdateFirebaseFirestoreDocument$doInBackground(kotlin.Array((java.lang.Void)))/p0">p0</span><span class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html"><span class="identifier">Void</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-post-execute.html">onPostExecute</a></h4>
+</td>
+<td>
+<p>Function executed after the task completes with the <a href="on-post-execute.html#sg.edu.ntu.scse.cz2006.gymbuddies.tasks.UpdateFirebaseFirestoreDocument$onPostExecute(kotlin.Boolean)/result">result</a> of the task</p>
+<code><span class="keyword">fun </span><span class="identifier">onPostExecute</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.tasks.UpdateFirebaseFirestoreDocument$onPostExecute(kotlin.Boolean)/result">result</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-t-a-g.html">TAG</a></h4>
+</td>
+<td>
+<p>Activity Tag for logs</p>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">TAG</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

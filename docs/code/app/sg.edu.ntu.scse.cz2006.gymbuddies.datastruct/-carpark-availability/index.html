@@ -1,0 +1,145 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CarparkAvailability - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">sg.edu.ntu.scse.cz2006.gymbuddies.datastruct</a>&nbsp;/&nbsp;<a href="./index.html">CarparkAvailability</a><br/>
+<br/>
+<h1>CarparkAvailability</h1>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">CarparkAvailability</span></code>
+<p>Data Structure object to hold the Gson object for the LTA Carpark Availability API
+for sg.edu.ntu.scse.cz2006.gymbuddies.datastruct in Gym Buddies!</p>
+<p><strong>Author</strong><br/>
+Kenneth Soh</p>
+<p><strong>Since</strong><br/>
+2019-10-22</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<code><span class="identifier">CarparkAvailability</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.CarparkAvailability$<init>(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.String)/CarParkID">CarParkID</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;""<span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.CarparkAvailability$<init>(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.String)/Area">Area</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;""<span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.CarparkAvailability$<init>(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.String)/Development">Development</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;"Nanyang Technological University Singapore"<span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.CarparkAvailability$<init>(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.String)/Location">Location</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;"1.3462 103.6820"<span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.CarparkAvailability$<init>(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.String)/AvailableLots">AvailableLots</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;0<span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.CarparkAvailability$<init>(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.String)/LotType">LotType</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;TYPE_CAR<span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.CarparkAvailability$<init>(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.String)/Agency">Agency</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;AGENCY_HDB<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-agency.html">Agency</a></h4>
+</td>
+<td>
+<p>String Agency managing the carpark. Can be of <a href="-a-g-e-n-c-y_-h-d-b.html">AGENCY_HDB</a>, <a href="-a-g-e-n-c-y_-l-t-a.html">AGENCY_LTA</a> or <a href="-a-g-e-n-c-y_-u-r-a.html">AGENCY_URA</a></p>
+<code><span class="keyword">val </span><span class="identifier">Agency</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-area.html">Area</a></h4>
+</td>
+<td>
+<p>String Carpark Area (E.g Marina), only used for LTA carparks</p>
+<code><span class="keyword">val </span><span class="identifier">Area</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-available-lots.html">AvailableLots</a></h4>
+</td>
+<td>
+<p>Int Number of available lots in the carpark at the point in time</p>
+<code><span class="keyword">val </span><span class="identifier">AvailableLots</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-car-park-i-d.html">CarParkID</a></h4>
+</td>
+<td>
+<p>String Carpark UID</p>
+<code><span class="keyword">val </span><span class="identifier">CarParkID</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-development.html">Development</a></h4>
+</td>
+<td>
+<p>String Carpark Address</p>
+<code><span class="keyword">val </span><span class="identifier">Development</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-location.html">Location</a></h4>
+</td>
+<td>
+<p>String Coordinates of carpark</p>
+<code><span class="keyword">val </span><span class="identifier">Location</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-lot-type.html">LotType</a></h4>
+</td>
+<td>
+<p>String Type of lot. Can be of <a href="-t-y-p-e_-c-a-r.html">TYPE_CAR</a>, <a href="-t-y-p-e_-h-e-a-v-y_-v-e-h.html">TYPE_HEAVY_VEH</a> or <a href="-t-y-p-e_-m-o-t-o-c-y-c-l-e.html">TYPE_MOTOCYCLE</a></p>
+<code><span class="keyword">val </span><span class="identifier">LotType</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-a-g-e-n-c-y_-h-d-b.html">AGENCY_HDB</a></h4>
+</td>
+<td>
+<p>Carpark is managed by Housing Development Board Singapore (HDB)</p>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">AGENCY_HDB</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-a-g-e-n-c-y_-l-t-a.html">AGENCY_LTA</a></h4>
+</td>
+<td>
+<p>Carpark is managed by the Land Transport Authroity Singapore (LTA)</p>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">AGENCY_LTA</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-a-g-e-n-c-y_-u-r-a.html">AGENCY_URA</a></h4>
+</td>
+<td>
+<p>Carpark is managed by the Urban Redevelopment Authority Singapore (URA)</p>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">AGENCY_URA</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-t-y-p-e_-c-a-r.html">TYPE_CAR</a></h4>
+</td>
+<td>
+<p>Carpark is meant for cars</p>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">TYPE_CAR</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-t-y-p-e_-h-e-a-v-y_-v-e-h.html">TYPE_HEAVY_VEH</a></h4>
+</td>
+<td>
+<p>Carpark is meant for heavy vehicles</p>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">TYPE_HEAVY_VEH</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-t-y-p-e_-m-o-t-o-c-y-c-l-e.html">TYPE_MOTOCYCLE</a></h4>
+</td>
+<td>
+<p>Carpark is meant for motocycles</p>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">TYPE_MOTOCYCLE</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

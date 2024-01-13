@@ -1,0 +1,108 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>UploadProfilePic - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">sg.edu.ntu.scse.cz2006.gymbuddies.tasks</a>&nbsp;/&nbsp;<a href="./index.html">UploadProfilePic</a><br/>
+<br/>
+<h1>UploadProfilePic</h1>
+<code><span class="keyword">class </span><span class="identifier">UploadProfilePic</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/AsyncTask.html"><span class="identifier">AsyncTask</span></a><span class="symbol">&lt;</span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html"><span class="identifier">Void</span></a><span class="symbol">,</span>&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html"><span class="identifier">Void</span></a><span class="symbol">,</span>&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html"><span class="identifier">Void</span></a><span class="symbol">&gt;</span></code>
+<p>Task ran to upload profile picture onto Firebase Storage and generate the URL of the image
+For sg.edu.ntu.scse.cz2006.gymbuddies.tasks in Gym Buddies!</p>
+<p><strong>Author</strong><br/>
+Kenneth Soh</p>
+<p><strong>Since</strong><br/>
+2019-09-16</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-callback/index.html">Callback</a></h4>
+</td>
+<td>
+<p>Internal interface to handle callbacks</p>
+<code><span class="keyword">interface </span><span class="identifier">Callback</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Initializees the task to execute</p>
+<code><span class="identifier">UploadProfilePic</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.tasks.UploadProfilePic$<init>(android.app.Activity, com.google.firebase.storage.StorageReference, android.graphics.Bitmap, sg.edu.ntu.scse.cz2006.gymbuddies.tasks.UploadProfilePic.Callback)/activity">activity</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/app/Activity.html"><span class="identifier">Activity</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.tasks.UploadProfilePic$<init>(android.app.Activity, com.google.firebase.storage.StorageReference, android.graphics.Bitmap, sg.edu.ntu.scse.cz2006.gymbuddies.tasks.UploadProfilePic.Callback)/ref">ref</span><span class="symbol">:</span>&nbsp;<span class="identifier">StorageReference</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.tasks.UploadProfilePic$<init>(android.app.Activity, com.google.firebase.storage.StorageReference, android.graphics.Bitmap, sg.edu.ntu.scse.cz2006.gymbuddies.tasks.UploadProfilePic.Callback)/bitmap">bitmap</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/graphics/Bitmap.html"><span class="identifier">Bitmap</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.tasks.UploadProfilePic$<init>(android.app.Activity, com.google.firebase.storage.StorageReference, android.graphics.Bitmap, sg.edu.ntu.scse.cz2006.gymbuddies.tasks.UploadProfilePic.Callback)/callback">callback</span><span class="symbol">:</span>&nbsp;<span class="identifier">Callback</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="act-ref.html">actRef</a></h4>
+</td>
+<td>
+<p>WeakReference&lt;(android.app.Activity..android.app.Activity?)&gt; A weak reference to the activity</p>
+<code><span class="keyword">val </span><span class="identifier">actRef</span><span class="symbol">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ref/WeakReference.html"><span class="identifier">WeakReference</span></a><span class="symbol">&lt;</span><a href="https://developer.android.com/reference/android/app/Activity.html"><span class="identifier">Activity</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="bitmap.html">bitmap</a></h4>
+</td>
+<td>
+<p>Bitmap The bitmap image to store on the server and generate the URL from</p>
+<code><span class="keyword">val </span><span class="identifier">bitmap</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/graphics/Bitmap.html"><span class="identifier">Bitmap</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="callback.html">callback</a></h4>
+</td>
+<td>
+<p>Callback Callback to call when task completes</p>
+<code><span class="keyword">val </span><span class="identifier">callback</span><span class="symbol">: </span><span class="identifier">Callback</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="ref.html">ref</a></h4>
+</td>
+<td>
+<p>StorageReference Reference to store the soon-to-be uploaded picture in on Firebase Storage</p>
+<code><span class="keyword">val </span><span class="identifier">ref</span><span class="symbol">: </span><span class="identifier">StorageReference</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="do-in-background.html">doInBackground</a></h4>
+</td>
+<td>
+<p>Internal task to execute in the background on a seperate thread</p>
+<code><span class="keyword">fun </span><span class="identifier">doInBackground</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.tasks.UploadProfilePic$doInBackground(kotlin.Array((java.lang.Void)))/p0">p0</span><span class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html"><span class="identifier">Void</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html"><span class="identifier">Void</span></a><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-t-a-g.html">TAG</a></h4>
+</td>
+<td>
+<p>Activity Tag for logs</p>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">TAG</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/radio_pref_rating"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    tools:context=".GymSearchActivity">
+
+    <RadioButton
+        style="@style/cb_highlight"
+        android:id="@+id/cb_rateall"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:text="All" />
+    <RadioButton
+        style="@style/cb_highlight"
+        android:id="@+id/cb_rate0"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:text="0 ★" />
+    <RadioButton
+        style="@style/cb_highlight"
+        android:id="@+id/cb_rate1"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:text="1 ★" />
+    <RadioButton
+        style="@style/cb_highlight"
+        android:id="@+id/cb_rate2"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:text="2 ★" />
+    <RadioButton
+        style="@style/cb_highlight"
+        android:id="@+id/cb_rate3"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:text="3 ★" />
+    <RadioButton
+        style="@style/cb_highlight"
+        android:id="@+id/cb_rate4"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:text="4 ★" />
+    <RadioButton
+        style="@style/cb_highlight"
+        android:id="@+id/cb_rate5"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:text="5 ★" />
+
+
+
+</RadioGroup>

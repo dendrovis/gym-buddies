@@ -1,0 +1,47 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="cb_highlight">
+        <item name="android:background">@drawable/btn_bg_highlight</item>
+        <item name="android:button">@android:color/transparent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/tint_text_highlight_color</item>
+    </style>
+
+    <style name="ColourButtonAccent" parent="Widget.AppCompat.Button">
+        <item name="colorButtonNormal">@color/colorAccent</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="ColourButtonAccentText" parent="Widget.AppCompat.Button">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="msg_date" >
+        <item name="android:background">@drawable/bg_msg_date</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:paddingStart">5dp</item>
+        <item name="android:paddingEnd">5dp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingBottom">2dp</item>
+    </style>
+</resources>

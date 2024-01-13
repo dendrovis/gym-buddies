@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="4dp"
+    android:clipToPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="16dp"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/rate_pic"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:minHeight="52dp"
+            android:minWidth="52dp"
+            android:maxHeight="52dp"
+            android:maxWidth="52dp"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:layout_marginTop="-4dp"
+            android:contentDescription="@string/nav_header_desc"
+            android:paddingTop="@dimen/nav_header_vertical_spacing"
+            app:srcCompat="@mipmap/ic_launcher_round" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_gravity="center_vertical"
+                android:text="@string/name_placeholder"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                app:fontFamily="@font/google_product_sans"
+                android:ellipsize="end"
+                android:id="@+id/rate_name"
+                android:textColor="#000000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="16dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatRatingBar
+            style="@style/Base.Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/rate_rating"
+            android:numStars="5"
+            android:rating="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:id="@+id/rate_date"
+            android:text="@string/date_placeholder" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="4dp"
+        android:id="@+id/rate_review"
+        android:text="@string/gym_desc_placeholder_rant" />
+
+</LinearLayout>

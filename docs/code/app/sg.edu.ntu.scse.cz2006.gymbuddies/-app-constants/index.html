@@ -1,0 +1,100 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>AppConstants - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">sg.edu.ntu.scse.cz2006.gymbuddies</a>&nbsp;/&nbsp;<a href="./index.html">AppConstants</a><br/>
+<br/>
+<h1>AppConstants</h1>
+<code><span class="keyword">interface </span><span class="identifier">AppConstants</span></code>
+<p>Interface to provides application related constants For sg.edu.ntu.scse.cz2006.gymbuddies in Gym Buddies!</p>
+<p><strong>Author</strong><br/>
+Chia Yu</p>
+<p><strong>Since</strong><br/>
+2019-10-22</p>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-c-o-l-l-e-c-t-i-o-n_-c-h-a-t.html">COLLECTION_CHAT</a></h4>
+</td>
+<td>
+<p>Firestore database collection key for chat</p>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">COLLECTION_CHAT</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-c-o-l-l-e-c-t-i-o-n_-f-a-v_-b-u-d-d-y.html">COLLECTION_FAV_BUDDY</a></h4>
+</td>
+<td>
+<p>Firestore database collection key for favbuddy</p>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">COLLECTION_FAV_BUDDY</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-c-o-l-l-e-c-t-i-o-n_-m-e-s-s-a-g-e-s.html">COLLECTION_MESSAGES</a></h4>
+</td>
+<td>
+<p>Firestore database collection key for message</p>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">COLLECTION_MESSAGES</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-m-a-x_-c-a-c-h-e_-d-u-r-a-t-i-o-n.html">MAX_CACHE_DURATION</a></h4>
+</td>
+<td>
+<p>Valid max duration for image cache</p>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">MAX_CACHE_DURATION</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.ui.bdlist/-buddy-list-fragment/index.html">BuddyListFragment</a></h4>
+</td>
+<td>
+<p>The fragment display list of buddies (favoured user) of current user it allow user to view profile information, start chat and un-favour of user</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BuddyListFragment</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Fragment</span><span class="symbol">, </span><a href="./index.html"><span class="identifier">AppConstants</span></a><span class="symbol">, </span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.listener/-on-recycler-view-interacted-listener/index.html"><span class="identifier">OnRecyclerViewInteractedListener</span></a><span class="symbol">&lt;</span><span class="identifier">ViewHolder</span><span class="symbol">!</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-buddy-search-result-activity/index.html">BuddySearchResultActivity</a></h4>
+</td>
+<td>
+<p>This is the display buddy search result it gets searching condition from Search buddies fragment, and perform query to Firestore After getting response, it display other users on Recycler view. User can then interact and add them as buddy</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BuddySearchResultActivity</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">AppCompatActivity</span><span class="symbol">, </span><a href="./index.html"><span class="identifier">AppConstants</span></a><span class="symbol">, </span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.listener/-on-recycler-view-interacted-listener/index.html"><span class="identifier">OnRecyclerViewInteractedListener</span></a><span class="symbol">&lt;</span><span class="identifier">ViewHolder</span><span class="symbol">!</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-chat-activity/index.html">ChatActivity</a></h4>
+</td>
+<td>
+<p>The Activity displaying chat history between another user, and allows user to sent and receive message.</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ChatActivity</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">AppCompatActivity</span><span class="symbol">, </span><a href="./index.html"><span class="identifier">AppConstants</span></a><span class="symbol">, </span><a href="https://developer.android.com/reference/android/view/View/OnClickListener.html"><span class="identifier">OnClickListener</span></a><span class="symbol">, </span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.listener/-on-recycler-view-interacted-listener/index.html"><span class="identifier">OnRecyclerViewInteractedListener</span></a><span class="symbol">&lt;</span><span class="identifier">ViewHolder</span><span class="symbol">!</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.ui.chatlist/-chat-list-fragment/index.html">ChatListFragment</a></h4>
+</td>
+<td>
+<p>The fragment display list of buddies (favoured user) of current user it allow user to view profile information, start chat and un-favour of user</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ChatListFragment</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Fragment</span><span class="symbol">, </span><a href="./index.html"><span class="identifier">AppConstants</span></a><span class="symbol">, </span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.listener/-on-recycler-view-interacted-listener/index.html"><span class="identifier">OnRecyclerViewInteractedListener</span></a><span class="symbol">&lt;</span><span class="identifier">ChatViewHolder</span><span class="symbol">!</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.util/-disk-i-o-helper/index.html">DiskIOHelper</a></h4>
+</td>
+<td>
+<p>DiskIOHelper provides the ability to cache bitmap into application's internal storage. it improves loading speed and reduce number of downloads to save user's data usage</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DiskIOHelper</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">AppConstants</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

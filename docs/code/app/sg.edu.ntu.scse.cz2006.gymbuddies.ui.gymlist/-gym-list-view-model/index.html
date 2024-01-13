@@ -1,0 +1,113 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>GymListViewModel - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">sg.edu.ntu.scse.cz2006.gymbuddies.ui.gymlist</a>&nbsp;/&nbsp;<a href="./index.html">GymListViewModel</a><br/>
+<br/>
+<h1>GymListViewModel</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">GymListViewModel</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ViewModel</span></code>
+<p>View model for the favourite gyms fragment</p>
+<p><strong>Author</strong><br/>
+Kenneth Soh</p>
+<p><strong>Since</strong><br/>
+2019-10-03</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>View model for the favourite gyms fragment</p>
+<code><span class="identifier">GymListViewModel</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="current-user-fav-list.html">currentUserFavList</a></h4>
+</td>
+<td>
+<p>Live data of the current logged in user's favourite gyms</p>
+<code><span class="keyword">var </span><span class="identifier">currentUserFavList</span><span class="symbol">: </span><span class="identifier">MutableLiveData</span><span class="symbol">&lt;</span><a href="https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html"><span class="identifier">HashMap</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="fav-count.html">favCount</a></h4>
+</td>
+<td>
+<p>Live data for the current selected gym object favourite count</p>
+<code><span class="keyword">var </span><span class="identifier">favCount</span><span class="symbol">: </span><span class="identifier">MutableLiveData</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="selected-gym.html">selectedGym</a></h4>
+</td>
+<td>
+<p>Live data for the selected gym object</p>
+<code><span class="keyword">var </span><span class="identifier">selectedGym</span><span class="symbol">: </span><span class="identifier">MutableLiveData</span><span class="symbol">&lt;</span><span class="identifier">GymShell</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="get-current-user-favourites.html">getCurrentUserFavourites</a></h4>
+</td>
+<td>
+<p>Gets the live data of the user's current favourited gyms</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCurrentUserFavourites</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html"><span class="identifier">HashMap</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-fav-count.html">getFavCount</a></h4>
+</td>
+<td>
+<p>Gets selected gym favourite count live data</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getFavCount</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-selected-gym.html">getSelectedGym</a></h4>
+</td>
+<td>
+<p>Gets selected gym live data</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSelectedGym</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LiveData</span><span class="symbol">&lt;</span><span class="identifier">GymShell</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-selected-gym.html">setSelectedGym</a></h4>
+</td>
+<td>
+<p>Updates selected gym</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSelectedGym</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.gymlist.GymListViewModel$setSelectedGym(sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.FavGymObject)/gym">gym</span><span class="symbol">:</span>&nbsp;<a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-fav-gym-object/index.html"><span class="identifier">FavGymObject</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="update-current-user-favourites.html">updateCurrentUserFavourites</a></h4>
+</td>
+<td>
+<p>Sets the current logged in user's favourited gyms and their live favourite counts</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">updateCurrentUserFavourites</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.gymlist.GymListViewModel$updateCurrentUserFavourites(java.util.HashMap((kotlin.String, kotlin.Int)))/currentFav">currentFav</span><span class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html"><span class="identifier">HashMap</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="update-fav-count.html">updateFavCount</a></h4>
+</td>
+<td>
+<p>Updates favourite count for selected gym</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">updateFavCount</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.gymlist.GymListViewModel$updateFavCount(kotlin.Int)/count">count</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:id="@+id/nav_group_menus" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_gym_list"
+            android:icon="@drawable/ic_heart"
+            android:title="@string/menu_gym_list" />
+        <item
+            android:id="@+id/nav_bd_search"
+            android:icon="@drawable/ic_magnify"
+            android:title="@string/menu_bd_search" />
+
+        <item
+            android:id="@+id/nav_bd_list"
+            android:icon="@drawable/ic_account_multiple"
+            android:title="@string/menu_bd_list" />
+        <item
+            android:id="@+id/nav_chat_list"
+            android:icon="@drawable/ic_message_text"
+            android:title="@string/menu_chat_list" />
+    </group>
+
+    <group android:id="@+id/nav_group_system_tools" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/action_settings" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_logout"
+            android:title="@string/logout" />
+    </group>
+
+<!--    <item android:title="Communicate">-->
+<!--        <menu>-->
+<!--            <item-->
+<!--                android:id="@+id/nav_share"-->
+<!--                android:icon="@drawable/ic_menu_share"-->
+<!--                android:title="@string/menu_share" />-->
+<!--            <item-->
+<!--                android:id="@+id/nav_send"-->
+<!--                android:icon="@drawable/ic_menu_send"-->
+<!--                android:title="@string/menu_send" />-->
+<!--        </menu>-->
+<!--    </item>-->
+
+</menu>

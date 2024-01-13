@@ -1,0 +1,32 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SwipeDeleteCallback.onMove - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">sg.edu.ntu.scse.cz2006.gymbuddies.util</a>&nbsp;/&nbsp;<a href="index.html">SwipeDeleteCallback</a>&nbsp;/&nbsp;<a href="./on-move.html">onMove</a><br/>
+<br/>
+<h1>onMove</h1>
+<a name="sg.edu.ntu.scse.cz2006.gymbuddies.util.SwipeDeleteCallback$onMove(androidx.recyclerview.widget.RecyclerView, androidx.recyclerview.widget.RecyclerView.ViewHolder, androidx.recyclerview.widget.RecyclerView.ViewHolder)"></a>
+<code><span class="keyword">fun </span><span class="identifier">onMove</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.util.SwipeDeleteCallback$onMove(androidx.recyclerview.widget.RecyclerView, androidx.recyclerview.widget.RecyclerView.ViewHolder, androidx.recyclerview.widget.RecyclerView.ViewHolder)/recyclerView">recyclerView</span><span class="symbol">:</span>&nbsp;<span class="identifier">RecyclerView</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.util.SwipeDeleteCallback$onMove(androidx.recyclerview.widget.RecyclerView, androidx.recyclerview.widget.RecyclerView.ViewHolder, androidx.recyclerview.widget.RecyclerView.ViewHolder)/viewHolder">viewHolder</span><span class="symbol">:</span>&nbsp;<span class="identifier">ViewHolder</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.util.SwipeDeleteCallback$onMove(androidx.recyclerview.widget.RecyclerView, androidx.recyclerview.widget.RecyclerView.ViewHolder, androidx.recyclerview.widget.RecyclerView.ViewHolder)/target">target</span><span class="symbol">:</span>&nbsp;<span class="identifier">ViewHolder</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Called when ItemTouchHelper wants to move the dragged item from its old position to
+the new position.</p>
+<p>If this method returns true, ItemTouchHelper assumes <a href="on-move.html#sg.edu.ntu.scse.cz2006.gymbuddies.util.SwipeDeleteCallback$onMove(androidx.recyclerview.widget.RecyclerView, androidx.recyclerview.widget.RecyclerView.ViewHolder, androidx.recyclerview.widget.RecyclerView.ViewHolder)/viewHolder">viewHolder</a> has been moved
+to the adapter position of <a href="on-move.html#sg.edu.ntu.scse.cz2006.gymbuddies.util.SwipeDeleteCallback$onMove(androidx.recyclerview.widget.RecyclerView, androidx.recyclerview.widget.RecyclerView.ViewHolder, androidx.recyclerview.widget.RecyclerView.ViewHolder)/target">target</a> ViewHolder
+({@link ViewHolder#getAdapterPosition()
+ViewHolder#getAdapterPosition()}).</p>
+<p>If you don't support drag &amp; drop, this method will never be called.</p>
+<h3>Parameters</h3>
+<p><a name="recyclerView"></a>
+<code>recyclerView</code> - The RecyclerView to which ItemTouchHelper is attached to.</p>
+<p><a name="viewHolder"></a>
+<code>viewHolder</code> - The ViewHolder which is being dragged by the user.</p>
+<p><a name="target"></a>
+<code>target</code> - The ViewHolder over which the currently active item is being
+    dragged.</p>
+<p><strong>Return</strong><br/>
+True if the <a href="on-move.html#sg.edu.ntu.scse.cz2006.gymbuddies.util.SwipeDeleteCallback$onMove(androidx.recyclerview.widget.RecyclerView, androidx.recyclerview.widget.RecyclerView.ViewHolder, androidx.recyclerview.widget.RecyclerView.ViewHolder)/viewHolder">viewHolder</a> has been moved to the adapter position of
+{@code target}.</p>
+</BODY>
+</HTML>

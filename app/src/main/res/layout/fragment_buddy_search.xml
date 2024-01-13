@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_label_region"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_pref_location" />
+
+        <Spinner
+            android:id="@+id/spinner_live_region"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/listPreferredItemHeight"
+            android:entries="@array/live_region"/>
+
+        <TextView
+            android:id="@+id/tv_label_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/txt_buddy_gender" />
+
+        <RadioGroup
+            android:id="@+id/rg_bd_gender"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/listPreferredItemHeight"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                style="@style/cb_highlight"
+                android:id="@+id/rb_male"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.33"
+                android:checked="true"
+                android:drawableTop="@drawable/ic_human_male"
+                android:text="@string/txt_male" />
+            <RadioButton
+                style="@style/cb_highlight"
+                android:id="@+id/rb_female"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.33"
+                android:drawableTop="@drawable/ic_human_female"
+                android:text="@string/txt_female" />
+            <RadioButton
+                style="@style/cb_highlight"
+                android:id="@+id/rb_both"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.33"
+                android:drawableTop="@drawable/ic_human_male_female"
+                android:text="@string/txt_both" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tv_label_time_range"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/txt_pref_time"
+            app:layout_constraintTop_toBottomOf="@+id/rg_bd_gender" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rg_bd_time"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <RadioButton
+                style="@style/cb_highlight"
+                android:id="@+id/rb_morning"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.33"
+                android:checked="true"
+                android:drawableTop="@drawable/ic_sun"
+                android:text="@string/txt_am" />
+            <RadioButton
+                style="@style/cb_highlight"
+                android:id="@+id/rb_afternoon"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.33"
+                android:drawableTop="@drawable/ic_moon"
+                android:text="@string/txt_pm" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tv_label_pref_days"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/txt_pref_dym_days"
+            app:layout_constraintTop_toBottomOf="@+id/rg_bd_gender" />
+
+
+        <include layout="@layout/row_pref_days"/>
+
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_search" />
+
+    </LinearLayout>
+</ScrollView>

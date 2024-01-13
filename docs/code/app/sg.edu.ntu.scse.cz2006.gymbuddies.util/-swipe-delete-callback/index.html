@@ -1,0 +1,149 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SwipeDeleteCallback - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">sg.edu.ntu.scse.cz2006.gymbuddies.util</a>&nbsp;/&nbsp;<a href="./index.html">SwipeDeleteCallback</a><br/>
+<br/>
+<h1>SwipeDeleteCallback</h1>
+<code><span class="keyword">class </span><span class="identifier">SwipeDeleteCallback</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">SimpleCallback</span></code>
+<p>Helper class for handling RecyclerView swipe capabilities. Calls the <a href="callback.html">callback</a> when swiped
+For sg.edu.ntu.scse.cz2006.gymbuddies.util in Gym Buddies!</p>
+<p><strong>Author</strong><br/>
+Kenneth Soh</p>
+<p><strong>Since</strong><br/>
+2019-10-03</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-i-swipe-callback/index.html">ISwipeCallback</a></h4>
+</td>
+<td>
+<p>Interface that other classes implement to handle swipe callback</p>
+<code><span class="keyword">interface </span><span class="identifier">ISwipeCallback</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Generates a callback that will be invoked when a user swipes on the selected recycler view</p>
+<code><span class="identifier">SwipeDeleteCallback</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.util.SwipeDeleteCallback$<init>(sg.edu.ntu.scse.cz2006.gymbuddies.util.SwipeDeleteCallback.ISwipeCallback, android.content.Context, kotlin.Int, kotlin.Int)/callback">callback</span><span class="symbol">:</span>&nbsp;<span class="identifier">ISwipeCallback</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.util.SwipeDeleteCallback$<init>(sg.edu.ntu.scse.cz2006.gymbuddies.util.SwipeDeleteCallback.ISwipeCallback, android.content.Context, kotlin.Int, kotlin.Int)/context">context</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.util.SwipeDeleteCallback$<init>(sg.edu.ntu.scse.cz2006.gymbuddies.util.SwipeDeleteCallback.ISwipeCallback, android.content.Context, kotlin.Int, kotlin.Int)/swipeDirection">swipeDirection</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;ItemTouchHelper.LEFT<span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.util.SwipeDeleteCallback$<init>(sg.edu.ntu.scse.cz2006.gymbuddies.util.SwipeDeleteCallback.ISwipeCallback, android.content.Context, kotlin.Int, kotlin.Int)/removeIcon">removeIcon</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="callback.html">callback</a></h4>
+</td>
+<td>
+<p>ISwipeCallback The callback used when a valid swipe is detected</p>
+<code><span class="keyword">var </span><span class="identifier">callback</span><span class="symbol">: </span><span class="identifier">ISwipeCallback</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="context.html">context</a></h4>
+</td>
+<td>
+<p>Context Application Context</p>
+<code><span class="keyword">var </span><span class="identifier">context</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="delete-background.html">deleteBackground</a></h4>
+</td>
+<td>
+<p>Int The background color for delete. Set to <a href="https://developer.android.com/reference/android/graphics/Color.html#RED">Color.RED</a></p>
+<code><span class="keyword">val </span><span class="identifier">deleteBackground</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="delete-bitmap.html">deleteBitmap</a></h4>
+</td>
+<td>
+<p>Bitmap The delete bitmap to draw. Can pass in your own through <a href="remove-icon.html">removeIcon</a></p>
+<code><span class="keyword">val </span><span class="identifier">deleteBitmap</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/graphics/Bitmap.html"><span class="identifier">Bitmap</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="icon-color.html">iconColor</a></h4>
+</td>
+<td>
+<p>Paint The icon color, set to <a href="https://developer.android.com/reference/android/graphics/Color.html#WHITE">Color.WHITE</a></p>
+<code><span class="keyword">val </span><span class="identifier">iconColor</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/graphics/Paint.html"><span class="identifier">Paint</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="remove-icon.html">removeIcon</a></h4>
+</td>
+<td>
+<p>Int? A custom delete icon if you wish to implement. Requires a drawable id</p>
+<code><span class="keyword">var </span><span class="identifier">removeIcon</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="swipe-direction.html">swipeDirection</a></h4>
+</td>
+<td>
+<p>Int The direction to swipe. Can be ItemTouchHelper.LEFT, ItemTouchHelper.RIGHT or SWIPE_ANY</p>
+<code><span class="keyword">var </span><span class="identifier">swipeDirection</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="on-child-draw.html">onChildDraw</a></h4>
+</td>
+<td>
+<p>Called by ItemTouchHelper on RecyclerView's onDraw callback.</p>
+<code><span class="keyword">fun </span><span class="identifier">onChildDraw</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.util.SwipeDeleteCallback$onChildDraw(android.graphics.Canvas, androidx.recyclerview.widget.RecyclerView, androidx.recyclerview.widget.RecyclerView.ViewHolder, kotlin.Float, kotlin.Float, kotlin.Int, kotlin.Boolean)/c">c</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/graphics/Canvas.html"><span class="identifier">Canvas</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.util.SwipeDeleteCallback$onChildDraw(android.graphics.Canvas, androidx.recyclerview.widget.RecyclerView, androidx.recyclerview.widget.RecyclerView.ViewHolder, kotlin.Float, kotlin.Float, kotlin.Int, kotlin.Boolean)/recyclerView">recyclerView</span><span class="symbol">:</span>&nbsp;<span class="identifier">RecyclerView</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.util.SwipeDeleteCallback$onChildDraw(android.graphics.Canvas, androidx.recyclerview.widget.RecyclerView, androidx.recyclerview.widget.RecyclerView.ViewHolder, kotlin.Float, kotlin.Float, kotlin.Int, kotlin.Boolean)/viewHolder">viewHolder</span><span class="symbol">:</span>&nbsp;<span class="identifier">ViewHolder</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.util.SwipeDeleteCallback$onChildDraw(android.graphics.Canvas, androidx.recyclerview.widget.RecyclerView, androidx.recyclerview.widget.RecyclerView.ViewHolder, kotlin.Float, kotlin.Float, kotlin.Int, kotlin.Boolean)/dX">dX</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html"><span class="identifier">Float</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.util.SwipeDeleteCallback$onChildDraw(android.graphics.Canvas, androidx.recyclerview.widget.RecyclerView, androidx.recyclerview.widget.RecyclerView.ViewHolder, kotlin.Float, kotlin.Float, kotlin.Int, kotlin.Boolean)/dY">dY</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html"><span class="identifier">Float</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.util.SwipeDeleteCallback$onChildDraw(android.graphics.Canvas, androidx.recyclerview.widget.RecyclerView, androidx.recyclerview.widget.RecyclerView.ViewHolder, kotlin.Float, kotlin.Float, kotlin.Int, kotlin.Boolean)/actionState">actionState</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.util.SwipeDeleteCallback$onChildDraw(android.graphics.Canvas, androidx.recyclerview.widget.RecyclerView, androidx.recyclerview.widget.RecyclerView.ViewHolder, kotlin.Float, kotlin.Float, kotlin.Int, kotlin.Boolean)/isCurrentlyActive">isCurrentlyActive</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-move.html">onMove</a></h4>
+</td>
+<td>
+<p>Called when ItemTouchHelper wants to move the dragged item from its old position to
+the new position.</p>
+<code><span class="keyword">fun </span><span class="identifier">onMove</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.util.SwipeDeleteCallback$onMove(androidx.recyclerview.widget.RecyclerView, androidx.recyclerview.widget.RecyclerView.ViewHolder, androidx.recyclerview.widget.RecyclerView.ViewHolder)/recyclerView">recyclerView</span><span class="symbol">:</span>&nbsp;<span class="identifier">RecyclerView</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.util.SwipeDeleteCallback$onMove(androidx.recyclerview.widget.RecyclerView, androidx.recyclerview.widget.RecyclerView.ViewHolder, androidx.recyclerview.widget.RecyclerView.ViewHolder)/viewHolder">viewHolder</span><span class="symbol">:</span>&nbsp;<span class="identifier">ViewHolder</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.util.SwipeDeleteCallback$onMove(androidx.recyclerview.widget.RecyclerView, androidx.recyclerview.widget.RecyclerView.ViewHolder, androidx.recyclerview.widget.RecyclerView.ViewHolder)/target">target</span><span class="symbol">:</span>&nbsp;<span class="identifier">ViewHolder</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-swiped.html">onSwiped</a></h4>
+</td>
+<td>
+<p>Called when a ViewHolder is swiped by the user.</p>
+<code><span class="keyword">fun </span><span class="identifier">onSwiped</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.util.SwipeDeleteCallback$onSwiped(androidx.recyclerview.widget.RecyclerView.ViewHolder, kotlin.Int)/viewHolder">viewHolder</span><span class="symbol">:</span>&nbsp;<span class="identifier">ViewHolder</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.util.SwipeDeleteCallback$onSwiped(androidx.recyclerview.widget.RecyclerView.ViewHolder, kotlin.Int)/direction">direction</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-s-w-i-p-e_-a-n-y.html">SWIPE_ANY</a></h4>
+</td>
+<td>
+<p>Allows swiping from any direction</p>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">SWIPE_ANY</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

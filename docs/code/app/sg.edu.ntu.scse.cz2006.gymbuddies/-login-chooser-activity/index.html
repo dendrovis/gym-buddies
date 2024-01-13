@@ -1,0 +1,134 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>LoginChooserActivity - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">sg.edu.ntu.scse.cz2006.gymbuddies</a>&nbsp;/&nbsp;<a href="./index.html">LoginChooserActivity</a><br/>
+<br/>
+<h1>LoginChooserActivity</h1>
+<code><span class="keyword">class </span><span class="identifier">LoginChooserActivity</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">AppCompatActivity</span></code>
+<p>This is the main launcher activity that shows up to handle the login page of the application
+There are some flags in this activity</p>
+<ul><li><a href="sign-in-flow.html">signInFlow</a> denotes if we are currently in the sign in process</li>
+<li><a href="checking-further.html">checkingFurther</a> denotes if we are currently handling further checks to authentication</li>
+</ul>
+<p>On top of that we have a listener <a href="m-auth-state-listener.html">mAuthStateListener</a> that handles the state changes during authentication
+For sg.edu.ntu.scse.cz2006.gymbuddies in Gym Buddies!</p>
+<p><strong>Author</strong><br/>
+Kenneth Soh</p>
+<p><strong>Since</strong><br/>
+2019-09-03</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>This is the main launcher activity that shows up to handle the login page of the application
+There are some flags in this activity</p>
+<code><span class="identifier">LoginChooserActivity</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="checking-further.html">checkingFurther</a></h4>
+</td>
+<td>
+<p>Boolean Flag that is toggled when we are currently handling further authentication checks</p>
+<code><span class="keyword">var </span><span class="identifier">checkingFurther</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="m-auth-state-listener.html">mAuthStateListener</a></h4>
+</td>
+<td>
+<p>AuthStateListener Auuthentication State Change Listener for Firebase Authentication</p>
+<code><span class="keyword">val </span><span class="identifier">mAuthStateListener</span><span class="symbol">: </span><span class="identifier">AuthStateListener</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="sign-in-flow.html">signInFlow</a></h4>
+</td>
+<td>
+<p>Boolean Flag that is toggled when we are running the FirebaseUI Sign In Flow</p>
+<code><span class="keyword">var </span><span class="identifier">signInFlow</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="auto-login.html">autoLogin</a></h4>
+</td>
+<td>
+<p>Handling auto logging in of previously logged in user if any</p>
+<code><span class="keyword">fun </span><span class="identifier">autoLogin</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.LoginChooserActivity$autoLogin(com.google.firebase.auth.FirebaseUser)/fbUser">fbUser</span><span class="symbol">:</span>&nbsp;<span class="identifier">FirebaseUser</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="further-checks.html">furtherChecks</a></h4>
+</td>
+<td>
+<p>Any further checks with the authentication <a href="further-checks.html#sg.edu.ntu.scse.cz2006.gymbuddies.LoginChooserActivity$furtherChecks(kotlin.String, com.google.firebase.auth.FirebaseUser)/provider">provider</a>
+This is mainly used to handle further authentication check for email login such as handling if you completed email authentication</p>
+<code><span class="keyword">fun </span><span class="identifier">furtherChecks</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.LoginChooserActivity$furtherChecks(kotlin.String, com.google.firebase.auth.FirebaseUser)/provider">provider</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.LoginChooserActivity$furtherChecks(kotlin.String, com.google.firebase.auth.FirebaseUser)/userObj">userObj</span><span class="symbol">:</span>&nbsp;<span class="identifier">FirebaseUser</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="login.html">login</a></h4>
+</td>
+<td>
+<p>Login method that invokes FirebaseUI's Login Flow</p>
+<code><span class="keyword">fun </span><span class="identifier">login</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="logout.html">logout</a></h4>
+</td>
+<td>
+<p>Logs a user out. If you wish for no Toast messages to appear, set <a href="logout.html#sg.edu.ntu.scse.cz2006.gymbuddies.LoginChooserActivity$logout(kotlin.Boolean)/silent">silent</a> to true</p>
+<code><span class="keyword">fun </span><span class="identifier">logout</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.LoginChooserActivity$logout(kotlin.Boolean)/silent">silent</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-activity-result.html">onActivityResult</a></h4>
+</td>
+<td>
+<p>This handles the result of the FirebaseUI Login flow</p>
+<code><span class="keyword">fun </span><span class="identifier">onActivityResult</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.LoginChooserActivity$onActivityResult(kotlin.Int, kotlin.Int, android.content.Intent)/requestCode">requestCode</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.LoginChooserActivity$onActivityResult(kotlin.Int, kotlin.Int, android.content.Intent)/resultCode">resultCode</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.LoginChooserActivity$onActivityResult(kotlin.Int, kotlin.Int, android.content.Intent)/data">data</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Intent.html"><span class="identifier">Intent</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-create.html">onCreate</a></h4>
+</td>
+<td>
+<p>Function that is called when an activity is created</p>
+<code><span class="keyword">fun </span><span class="identifier">onCreate</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.LoginChooserActivity$onCreate(android.os.Bundle)/savedInstanceState">savedInstanceState</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/Bundle.html"><span class="identifier">Bundle</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-r-c_-s-i-g-n_-i-n.html">RC_SIGN_IN</a></h4>
+</td>
+<td>
+<p>Intent to request to enter Sign In Flow for Firebase UI</p>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">RC_SIGN_IN</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

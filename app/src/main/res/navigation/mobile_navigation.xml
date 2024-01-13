@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_gym_list"
+        android:name="sg.edu.ntu.scse.cz2006.gymbuddies.ui.gymlist.GymListFragment"
+        android:label="@string/menu_gym_list"
+        tools:layout="@layout/fragment_gym_list" />
+
+    <fragment
+        android:id="@+id/nav_bd_search"
+        android:name="sg.edu.ntu.scse.cz2006.gymbuddies.ui.bdsearch.BuddySearchFragment"
+        android:label="@string/menu_bd_search"
+        tools:layout="@layout/fragment_buddy_search" />
+
+    <fragment
+        android:id="@+id/nav_bd_list"
+        android:name="sg.edu.ntu.scse.cz2006.gymbuddies.ui.bdlist.BuddyListFragment"
+        android:label="@string/menu_bd_list"
+        tools:layout="@layout/fragment_buddy_list" />
+
+    <fragment
+        android:id="@+id/nav_chat_list"
+        android:name="sg.edu.ntu.scse.cz2006.gymbuddies.ui.chatlist.ChatListFragment"
+        android:label="@string/menu_chat_list"
+        tools:layout="@layout/fragment_chat_list" />
+</navigation>

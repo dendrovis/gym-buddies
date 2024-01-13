@@ -1,0 +1,102 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>GymReviewAdapter - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">sg.edu.ntu.scse.cz2006.gymbuddies.adapter</a>&nbsp;/&nbsp;<a href="./index.html">GymReviewAdapter</a><br/>
+<br/>
+<h1>GymReviewAdapter</h1>
+<code><span class="keyword">class </span><span class="identifier">GymReviewAdapter</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Adapter</span><span class="symbol">&lt;</span><span class="identifier">ReviewViewHolder</span><span class="symbol">&gt;</span></code>
+<p>Recycler Adapter for Gym Reviews
+For sg.edu.ntu.scse.cz2006.gymbuddies.adapter in Gym Buddies!</p>
+<p><strong>Author</strong><br/>
+Kenneth Soh</p>
+<p><strong>Since</strong><br/>
+2019-10-12</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-review-view-holder/index.html">ReviewViewHolder</a></h4>
+</td>
+<td>
+<p>Inner class to store the review data in</p>
+<code><span class="keyword">inner</span> <span class="keyword">class </span><span class="identifier">ReviewViewHolder</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ViewHolder</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Creates a adapter for the Gym Reviews List RecyclerView</p>
+<code><span class="identifier">GymReviewAdapter</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.GymReviewAdapter$<init>(android.app.Activity, kotlin.collections.List((sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.GymRatings)))/activity">activity</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/app/Activity.html"><span class="identifier">Activity</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.GymReviewAdapter$<init>(android.app.Activity, kotlin.collections.List((sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.GymRatings)))/reviews">reviews</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-gym-ratings/index.html"><span class="identifier">GymRatings</span></a><span class="symbol">&gt;</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="act-ref.html">actRef</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">actRef</span><span class="symbol">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ref/WeakReference.html"><span class="identifier">WeakReference</span></a><span class="symbol">&lt;</span><a href="https://developer.android.com/reference/android/app/Activity.html"><span class="identifier">Activity</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="review-list.html">reviewList</a></h4>
+</td>
+<td>
+<p>List The list of all reviews for the specific gym</p>
+<code><span class="keyword">var </span><span class="identifier">reviewList</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-gym-ratings/index.html"><span class="identifier">GymRatings</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="get-item-count.html">getItemCount</a></h4>
+</td>
+<td>
+<p>Gets the number of gyms stored in this adapter</p>
+<code><span class="keyword">fun </span><span class="identifier">getItemCount</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-list.html">getList</a></h4>
+</td>
+<td>
+<p>Gets the gym list stored in this adapter</p>
+<code><span class="keyword">fun </span><span class="identifier">getList</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-gym-ratings/index.html"><span class="identifier">GymRatings</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-bind-view-holder.html">onBindViewHolder</a></h4>
+</td>
+<td>
+<p>Internal function to bind the view <a href="on-bind-view-holder.html#sg.edu.ntu.scse.cz2006.gymbuddies.adapter.GymReviewAdapter$onBindViewHolder(sg.edu.ntu.scse.cz2006.gymbuddies.adapter.GymReviewAdapter.ReviewViewHolder, kotlin.Int)/holder">holder</a> at the current RecyclerView <a href="on-bind-view-holder.html#sg.edu.ntu.scse.cz2006.gymbuddies.adapter.GymReviewAdapter$onBindViewHolder(sg.edu.ntu.scse.cz2006.gymbuddies.adapter.GymReviewAdapter.ReviewViewHolder, kotlin.Int)/position">position</a> to a specific data</p>
+<code><span class="keyword">fun </span><span class="identifier">onBindViewHolder</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.GymReviewAdapter$onBindViewHolder(sg.edu.ntu.scse.cz2006.gymbuddies.adapter.GymReviewAdapter.ReviewViewHolder, kotlin.Int)/holder">holder</span><span class="symbol">:</span>&nbsp;<span class="identifier">ReviewViewHolder</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.GymReviewAdapter$onBindViewHolder(sg.edu.ntu.scse.cz2006.gymbuddies.adapter.GymReviewAdapter.ReviewViewHolder, kotlin.Int)/position">position</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-create-view-holder.html">onCreateViewHolder</a></h4>
+</td>
+<td>
+<p>Creates the required View Holder to store the data in</p>
+<code><span class="keyword">fun </span><span class="identifier">onCreateViewHolder</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.GymReviewAdapter$onCreateViewHolder(android.view.ViewGroup, kotlin.Int)/parent">parent</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/ViewGroup.html"><span class="identifier">ViewGroup</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.GymReviewAdapter$onCreateViewHolder(android.view.ViewGroup, kotlin.Int)/viewType">viewType</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ReviewViewHolder</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

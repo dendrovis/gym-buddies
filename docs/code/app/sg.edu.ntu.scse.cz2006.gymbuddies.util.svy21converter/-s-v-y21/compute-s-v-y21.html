@@ -1,0 +1,30 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SVY21.computeSVY21 - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">sg.edu.ntu.scse.cz2006.gymbuddies.util.svy21converter</a>&nbsp;/&nbsp;<a href="index.html">SVY21</a>&nbsp;/&nbsp;<a href="./compute-s-v-y21.html">computeSVY21</a><br/>
+<br/>
+<h1>computeSVY21</h1>
+<a name="sg.edu.ntu.scse.cz2006.gymbuddies.util.svy21converter.SVY21$computeSVY21(kotlin.Double, kotlin.Double)"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">computeSVY21</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.util.svy21converter.SVY21$computeSVY21(kotlin.Double, kotlin.Double)/lat">lat</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.util.svy21converter.SVY21$computeSVY21(kotlin.Double, kotlin.Double)/lon">lon</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-s-v-y21-coordinate/index.html"><span class="identifier">SVY21Coordinate</span></a><span class="symbol">!</span></code>
+<p>Computes SVY21 Northing and Easting based on a Latitude and Longitude coordinate. This method returns an immutable SVY21Coordinate object that contains two fields, northing, accessible with .getNorthing(), and easting, accessible with .getEasting().</p>
+<h3>Parameters</h3>
+<p><a name="lat"></a>
+<code>lat</code> - <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a><span class="symbol">:</span> latitude in degrees.</p>
+<p><a name="lon"></a>
+<code>lon</code> - <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a><span class="symbol">:</span> longitude in degrees.</p>
+<p><strong>Return</strong><br/>
+<a href="../-s-v-y21-coordinate/index.html"><span class="identifier">SVY21Coordinate</span></a><span class="symbol">!</span><span class="symbol">:</span> the conversion result as an SVY21Coordinate.</p>
+<a name="sg.edu.ntu.scse.cz2006.gymbuddies.util.svy21converter.SVY21$computeSVY21(sg.edu.ntu.scse.cz2006.gymbuddies.util.svy21converter.LatLonCoordinate)"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">computeSVY21</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.util.svy21converter.SVY21$computeSVY21(sg.edu.ntu.scse.cz2006.gymbuddies.util.svy21converter.LatLonCoordinate)/coord">coord</span><span class="symbol">:</span>&nbsp;<a href="../-lat-lon-coordinate/index.html"><span class="identifier">LatLonCoordinate</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-s-v-y21-coordinate/index.html"><span class="identifier">SVY21Coordinate</span></a><span class="symbol">!</span></code>
+<p>Computes SVY21 Northing and Easting based on a Latitude and Longitude coordinate. This method returns an immutable SVY21Coordinate object that contains two fields, northing, accessible with .getNorthing(), and easting, accessible with .getEasting(). This method is a shorthand for the functionally identical public SVY21Coordinate computeSVY21(double lat, double lon).</p>
+<h3>Parameters</h3>
+<p><a name="coord"></a>
+<code>coord</code> - <a href="../-lat-lon-coordinate/index.html"><span class="identifier">LatLonCoordinate</span></a><span class="symbol">!</span><span class="symbol">:</span> a LatLonCoordinate object to convert.</p>
+<p><strong>Return</strong><br/>
+<a href="../-s-v-y21-coordinate/index.html"><span class="identifier">SVY21Coordinate</span></a><span class="symbol">!</span><span class="symbol">:</span> the conversion result an SVY21Coordinate.</p>
+</BODY>
+</HTML>

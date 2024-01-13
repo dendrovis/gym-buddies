@@ -1,0 +1,148 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>FavButtonView - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">sg.edu.ntu.scse.cz2006.gymbuddies.widget</a>&nbsp;/&nbsp;<a href="./index.html">FavButtonView</a><br/>
+<br/>
+<h1>FavButtonView</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">FavButtonView</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/widget/FrameLayout.html"><span class="identifier">FrameLayout</span></a><span class="symbol">, </span><a href="https://developer.android.com/reference/android/view/View/OnClickListener.html"><span class="identifier">OnClickListener</span></a></code>
+<p>Animated "heart" button based off Twitter's implementation Adapted from https://github.com/frogermcs/LikeAnimation for sg.edu.ntu.scse.cz2006.gymbuddies.widget in Gym Buddies!</p>
+<p><strong>Author</strong><br/>
+Kenneth Soh, frogermcs</p>
+<p><strong>Since</strong><br/>
+2019-10-01</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<code><span class="identifier">FavButtonView</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.widget.FavButtonView$<init>(android.content.Context)/context">context</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">!</span><span class="symbol">)</span></code><br/>
+<code><span class="identifier">FavButtonView</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.widget.FavButtonView$<init>(android.content.Context, android.util.AttributeSet)/context">context</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.widget.FavButtonView$<init>(android.content.Context, android.util.AttributeSet)/attrs">attrs</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/util/AttributeSet.html"><span class="identifier">AttributeSet</span></a><span class="symbol">!</span><span class="symbol">)</span></code><br/>
+<code><span class="identifier">FavButtonView</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.widget.FavButtonView$<init>(android.content.Context, android.util.AttributeSet, kotlin.Int)/context">context</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.widget.FavButtonView$<init>(android.content.Context, android.util.AttributeSet, kotlin.Int)/attrs">attrs</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/util/AttributeSet.html"><span class="identifier">AttributeSet</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.widget.FavButtonView$<init>(android.content.Context, android.util.AttributeSet, kotlin.Int)/defStyleAttr">defStyleAttr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span></code><br/>
+<code><span class="identifier">FavButtonView</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.widget.FavButtonView$<init>(android.content.Context, android.util.AttributeSet, kotlin.Int, kotlin.Int)/context">context</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.widget.FavButtonView$<init>(android.content.Context, android.util.AttributeSet, kotlin.Int, kotlin.Int)/attrs">attrs</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/util/AttributeSet.html"><span class="identifier">AttributeSet</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.widget.FavButtonView$<init>(android.content.Context, android.util.AttributeSet, kotlin.Int, kotlin.Int)/defStyleAttr">defStyleAttr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.widget.FavButtonView$<init>(android.content.Context, android.util.AttributeSet, kotlin.Int, kotlin.Int)/defStyleRes">defStyleRes</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-a-c-c-e-l-e-r-a-t-e_-d-e-c-e-l-e-r-a-t-e_-i-n-t-e-r-p-o-l-a-t-o-r.html">ACCELERATE_DECELERATE_INTERPOLATOR</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">ACCELERATE_DECELERATE_INTERPOLATOR</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/view/animation/AccelerateDecelerateInterpolator.html"><span class="identifier">AccelerateDecelerateInterpolator</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="animator-set.html">animatorSet</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">animatorSet</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/animation/AnimatorSet.html"><span class="identifier">AnimatorSet</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-d-e-c-c-e-l-e-r-a-t-e_-i-n-t-e-r-p-o-l-a-t-o-r.html">DECCELERATE_INTERPOLATOR</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">DECCELERATE_INTERPOLATOR</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/view/animation/DecelerateInterpolator.html"><span class="identifier">DecelerateInterpolator</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-checked.html">isChecked</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">isChecked</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="iv-heart.html">ivHeart</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">ivHeart</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/widget/ImageView.html"><span class="identifier">ImageView</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-o-v-e-r-s-h-o-o-t_-i-n-t-e-r-p-o-l-a-t-o-r.html">OVERSHOOT_INTERPOLATOR</a></h4>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">OVERSHOOT_INTERPOLATOR</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/view/animation/OvershootInterpolator.html"><span class="identifier">OvershootInterpolator</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="resource-off.html">resourceOff</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">resourceOff</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="resource-on.html">resourceOn</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">resourceOn</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="v-circle.html">vCircle</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">vCircle</span><span class="symbol">: </span><a href="../-circle-view/index.html"><span class="identifier">CircleView</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="v-dots-view.html">vDotsView</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">vDotsView</span><span class="symbol">: </span><a href="../-dots-view/index.html"><span class="identifier">DotsView</span></a><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="init.html">init</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">init</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-checked.html">isChecked</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isChecked</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-click.html">onClick</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onClick</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.widget.FavButtonView$onClick(android.view.View)/v">v</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-touch-event.html">onTouchEvent</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onTouchEvent</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.widget.FavButtonView$onTouchEvent(android.view.MotionEvent)/event">event</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/MotionEvent.html"><span class="identifier">MotionEvent</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-checked.html">setChecked</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setChecked</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.widget.FavButtonView$setChecked(kotlin.Boolean)/checked">checked</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

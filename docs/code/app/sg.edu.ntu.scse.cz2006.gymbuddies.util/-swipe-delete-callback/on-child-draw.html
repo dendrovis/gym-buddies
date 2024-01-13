@@ -1,0 +1,41 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SwipeDeleteCallback.onChildDraw - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">sg.edu.ntu.scse.cz2006.gymbuddies.util</a>&nbsp;/&nbsp;<a href="index.html">SwipeDeleteCallback</a>&nbsp;/&nbsp;<a href="./on-child-draw.html">onChildDraw</a><br/>
+<br/>
+<h1>onChildDraw</h1>
+<a name="sg.edu.ntu.scse.cz2006.gymbuddies.util.SwipeDeleteCallback$onChildDraw(android.graphics.Canvas, androidx.recyclerview.widget.RecyclerView, androidx.recyclerview.widget.RecyclerView.ViewHolder, kotlin.Float, kotlin.Float, kotlin.Int, kotlin.Boolean)"></a>
+<code><span class="keyword">fun </span><span class="identifier">onChildDraw</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.util.SwipeDeleteCallback$onChildDraw(android.graphics.Canvas, androidx.recyclerview.widget.RecyclerView, androidx.recyclerview.widget.RecyclerView.ViewHolder, kotlin.Float, kotlin.Float, kotlin.Int, kotlin.Boolean)/c">c</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/graphics/Canvas.html"><span class="identifier">Canvas</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.util.SwipeDeleteCallback$onChildDraw(android.graphics.Canvas, androidx.recyclerview.widget.RecyclerView, androidx.recyclerview.widget.RecyclerView.ViewHolder, kotlin.Float, kotlin.Float, kotlin.Int, kotlin.Boolean)/recyclerView">recyclerView</span><span class="symbol">:</span>&nbsp;<span class="identifier">RecyclerView</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.util.SwipeDeleteCallback$onChildDraw(android.graphics.Canvas, androidx.recyclerview.widget.RecyclerView, androidx.recyclerview.widget.RecyclerView.ViewHolder, kotlin.Float, kotlin.Float, kotlin.Int, kotlin.Boolean)/viewHolder">viewHolder</span><span class="symbol">:</span>&nbsp;<span class="identifier">ViewHolder</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.util.SwipeDeleteCallback$onChildDraw(android.graphics.Canvas, androidx.recyclerview.widget.RecyclerView, androidx.recyclerview.widget.RecyclerView.ViewHolder, kotlin.Float, kotlin.Float, kotlin.Int, kotlin.Boolean)/dX">dX</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html"><span class="identifier">Float</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.util.SwipeDeleteCallback$onChildDraw(android.graphics.Canvas, androidx.recyclerview.widget.RecyclerView, androidx.recyclerview.widget.RecyclerView.ViewHolder, kotlin.Float, kotlin.Float, kotlin.Int, kotlin.Boolean)/dY">dY</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html"><span class="identifier">Float</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.util.SwipeDeleteCallback$onChildDraw(android.graphics.Canvas, androidx.recyclerview.widget.RecyclerView, androidx.recyclerview.widget.RecyclerView.ViewHolder, kotlin.Float, kotlin.Float, kotlin.Int, kotlin.Boolean)/actionState">actionState</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.util.SwipeDeleteCallback$onChildDraw(android.graphics.Canvas, androidx.recyclerview.widget.RecyclerView, androidx.recyclerview.widget.RecyclerView.ViewHolder, kotlin.Float, kotlin.Float, kotlin.Int, kotlin.Boolean)/isCurrentlyActive">isCurrentlyActive</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Called by ItemTouchHelper on RecyclerView's onDraw callback.</p>
+<p>If you would like to customize how your View's respond to user interactions, this is
+a good place to override.</p>
+<p>Default implementation translates the child by the given <a href="on-child-draw.html#sg.edu.ntu.scse.cz2006.gymbuddies.util.SwipeDeleteCallback$onChildDraw(android.graphics.Canvas, androidx.recyclerview.widget.RecyclerView, androidx.recyclerview.widget.RecyclerView.ViewHolder, kotlin.Float, kotlin.Float, kotlin.Int, kotlin.Boolean)/dX">dX</a>, <a href="on-child-draw.html#sg.edu.ntu.scse.cz2006.gymbuddies.util.SwipeDeleteCallback$onChildDraw(android.graphics.Canvas, androidx.recyclerview.widget.RecyclerView, androidx.recyclerview.widget.RecyclerView.ViewHolder, kotlin.Float, kotlin.Float, kotlin.Int, kotlin.Boolean)/dY">dY</a>.
+ItemTouchHelper also takes care of drawing the child after other children if it is being
+dragged. This is done using child re-ordering mechanism. On platforms prior to L, this
+is
+achieved via {@link android.view.ViewGroup#getChildDrawingOrder(int, int)} and on L
+and after, it changes View's elevation value to be greater than all other children.)</p>
+<h3>Parameters</h3>
+<p><a name="c"></a>
+<code>c</code> - The canvas which RecyclerView is drawing its children</p>
+<p><a name="recyclerView"></a>
+<code>recyclerView</code> - The RecyclerView to which ItemTouchHelper is attached to</p>
+<p><a name="viewHolder"></a>
+<code>viewHolder</code> - The ViewHolder which is being interacted by the User or it was
+    interacted and simply animating to its original position</p>
+<p><a name="dX"></a>
+<code>dX</code> - The amount of horizontal displacement caused by user's action</p>
+<p><a name="dY"></a>
+<code>dY</code> - The amount of vertical displacement caused by user's action</p>
+<p><a name="actionState"></a>
+<code>actionState</code> - The type of interaction on the View. Is either {@link
+    #ACTION_STATE_DRAG} or {@link #ACTION_STATE_SWIPE}.</p>
+<p><a name="isCurrentlyActive"></a>
+<code>isCurrentlyActive</code> - True if this view is currently being controlled by the user or
+    false it is simply animating back to its original state.</p>
+</BODY>
+</HTML>

@@ -1,0 +1,200 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ProfileEditActivity - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">sg.edu.ntu.scse.cz2006.gymbuddies</a>&nbsp;/&nbsp;<a href="./index.html">ProfileEditActivity</a><br/>
+<br/>
+<h1>ProfileEditActivity</h1>
+<code><span class="keyword">class </span><span class="identifier">ProfileEditActivity</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">AppCompatActivity</span></code>
+<p>The activity that is used to handle profile view/edit for a logged in user
+There are a couple of flags that are used here:</p>
+<ul><li><a href="first-run.html">firstRun</a> denotes if the user is a new user and has not setup the application yet</li>
+<li><a href="edit-mode.html">editMode</a> denotes if the user is in a view-only mode or edit mode</li>
+</ul>
+<p>There are a couple more properties</p>
+<ul><li><a href="uid.html">uid</a> is the unique ID of the user</li>
+<li><a href="profile-image.html">profileImage</a> and <a href="profile-uri.html">profileUri</a> both defines the current user's profile picture if any
+For sg.edu.ntu.scse.cz2006.gymbuddies in Gym Buddies!</li>
+</ul>
+<p><strong>Author</strong><br/>
+Kenneth Soh</p>
+<p><strong>Since</strong><br/>
+2019-09-16</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>The activity that is used to handle profile view/edit for a logged in user
+There are a couple of flags that are used here:</p>
+<code><span class="identifier">ProfileEditActivity</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="edit-mode.html">editMode</a></h4>
+</td>
+<td>
+<p>Boolean If the user is currently allowed to edit the profile</p>
+<code><span class="keyword">var </span><span class="identifier">editMode</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="edit-user.html">editUser</a></h4>
+</td>
+<td>
+<p>User? The user in which this profile is editing</p>
+<code><span class="keyword">var </span><span class="identifier">editUser</span><span class="symbol">: </span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-user/index.html"><span class="identifier">User</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="first-run.html">firstRun</a></h4>
+</td>
+<td>
+<p>Boolean If this is the user's first logon to the app</p>
+<code><span class="keyword">var </span><span class="identifier">firstRun</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="profile-image.html">profileImage</a></h4>
+</td>
+<td>
+<p>Bitmap? The profile image if any of the user</p>
+<code><span class="keyword">var </span><span class="identifier">profileImage</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/graphics/Bitmap.html"><span class="identifier">Bitmap</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="profile-uri.html">profileUri</a></h4>
+</td>
+<td>
+<p>Uri? The url to the profile image of the user if any</p>
+<code><span class="keyword">var </span><span class="identifier">profileUri</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/net/Uri.html"><span class="identifier">Uri</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="uid.html">uid</a></h4>
+</td>
+<td>
+<p>String The Unique ID of the user</p>
+<code><span class="keyword">lateinit</span> <span class="keyword">var </span><span class="identifier">uid</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="add-or-update.html">addOrUpdate</a></h4>
+</td>
+<td>
+<p>Internal function to handling the creation or update of user profile</p>
+<code><span class="keyword">fun </span><span class="identifier">addOrUpdate</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="enter-view-only-mode.html">enterViewOnlyMode</a></h4>
+</td>
+<td>
+<p>This is an internal function of code to execute to enter view-only mode</p>
+<code><span class="keyword">fun </span><span class="identifier">enterViewOnlyMode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="exit-view-only-mode.html">exitViewOnlyMode</a></h4>
+</td>
+<td>
+<p>This is an internal function handling code to execute when exiting view-only mode and entering edit mode</p>
+<code><span class="keyword">fun </span><span class="identifier">exitViewOnlyMode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-selected-days.html">getSelectedDays</a></h4>
+</td>
+<td>
+<p>Internal function to obtain a list of preferred days that have been selected</p>
+<code><span class="keyword">fun </span><span class="identifier">getSelectedDays</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-activity-result.html">onActivityResult</a></h4>
+</td>
+<td>
+<p>This is used to handle results from any provider based profile pic such as from the Google Authentication</p>
+<code><span class="keyword">fun </span><span class="identifier">onActivityResult</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ProfileEditActivity$onActivityResult(kotlin.Int, kotlin.Int, android.content.Intent)/requestCode">requestCode</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ProfileEditActivity$onActivityResult(kotlin.Int, kotlin.Int, android.content.Intent)/resultCode">resultCode</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ProfileEditActivity$onActivityResult(kotlin.Int, kotlin.Int, android.content.Intent)/data">data</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Intent.html"><span class="identifier">Intent</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-back-pressed.html">onBackPressed</a></h4>
+</td>
+<td>
+<p>This function overrides the back functionality of the activity</p>
+<code><span class="keyword">fun </span><span class="identifier">onBackPressed</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-create.html">onCreate</a></h4>
+</td>
+<td>
+<p>Function that is called when an activity is created</p>
+<code><span class="keyword">fun </span><span class="identifier">onCreate</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ProfileEditActivity$onCreate(android.os.Bundle)/savedInstanceState">savedInstanceState</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/Bundle.html"><span class="identifier">Bundle</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-options-item-selected.html">onOptionsItemSelected</a></h4>
+</td>
+<td>
+<p>This function handles the selected menu <a href="on-options-item-selected.html#sg.edu.ntu.scse.cz2006.gymbuddies.ProfileEditActivity$onOptionsItemSelected(android.view.MenuItem)/item">item</a></p>
+<code><span class="keyword">fun </span><span class="identifier">onOptionsItemSelected</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ProfileEditActivity$onOptionsItemSelected(android.view.MenuItem)/item">item</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/MenuItem.html"><span class="identifier">MenuItem</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="update-data.html">updateData</a></h4>
+</td>
+<td>
+<p>This is a function to handle updating a <a href="update-data.html#sg.edu.ntu.scse.cz2006.gymbuddies.ProfileEditActivity$updateData(sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.User)/user">user</a>'s data</p>
+<code><span class="keyword">fun </span><span class="identifier">updateData</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ProfileEditActivity$updateData(sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.User)/user">user</span><span class="symbol">:</span>&nbsp;<a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-user/index.html"><span class="identifier">User</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="validate.html">validate</a></h4>
+</td>
+<td>
+<p>This is used to validate if all input requirements have been met</p>
+<code><span class="keyword">fun </span><span class="identifier">validate</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-r-e-q-u-e-s-t_-p-r-o-f-i-l-e_-p-i-c.html">REQUEST_PROFILE_PIC</a></h4>
+</td>
+<td>
+<p>Intent to request for profile pictures</p>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">REQUEST_PROFILE_PIC</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-t-a-g.html">TAG</a></h4>
+</td>
+<td>
+<p>Activity Tag for logs</p>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">TAG</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

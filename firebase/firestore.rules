@@ -1,0 +1,48 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+  	// Lock the whole database down
+  	match /{document=**} {
+      allow read, write: if false;
+    }
+    
+    // Allow access to user collection
+  	match /users/{userId} {
+      allow update, delete: if request.auth.uid == userId; // Only the user can edit their own data
+      allow read, create: if request.auth.uid != null; // All users can create their own collection data
+    }
+    
+    // Allow access to the favourite gym collection
+    match /favgym/{gymId} {
+    	allow read, create, update, delete: if request.auth.uid != null; // Allow all users to modify fav gym list
+    }
+    
+    // Allow access to the favourite buddy collection
+    match /favbuddy/{favBuddyId} {
+    	allow read, create, update, delete: if request.auth.uid != null; // Allow user to modify fav buddy list
+    }
+    
+    // Allow access to gym reviews statistics
+    match /gymreviews/{gymId} {
+    	allow read: if request.auth.uid != null; // Allow all authenticated users to view gym review statistics
+    }
+    
+    // Allow access to gym reviews for user
+    match /gymreviews/{gymId}/users/{userId} {
+    	allow read: if request.auth.uid != null; // Allow all authenticated users to read reviews
+    	allow delete: if request.auth.uid == userId; // Allow the reviewer to delete their own reviews
+      allow create, update: if request.auth.uid == userId && request.resource.data.message.size() <= 512; // Allow the reviewer to create or update their own review IF message length is up to 512 characters
+    }
+    
+    // Allow access to the chat hisotry, need to changeh later
+    match /chat/{chatId} {
+    	allow read, create, update, delete: if request.auth.uid != null; // Allow user to modify chat list
+    }
+    
+    // Allow access to the chat message, need to changeh later
+    match /chat/{chatId}/message/{messageId} {
+    	allow read, create, update, delete: if request.auth.uid != null; // Allow user to modify chat message
+    }
+    
+  }
+}

@@ -1,0 +1,68 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OnRecyclerViewInteractedListener - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">sg.edu.ntu.scse.cz2006.gymbuddies.listener</a>&nbsp;/&nbsp;<a href="./index.html">OnRecyclerViewInteractedListener</a><br/>
+<br/>
+<h1>OnRecyclerViewInteractedListener</h1>
+<code><span class="keyword">interface </span><span class="identifier">OnRecyclerViewInteractedListener</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ViewHolder</span><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>The interface allow RecyclerView.Adapter to send notify observer of view interactions</p>
+<p><strong>Author</strong><br/>
+Chia Yu</p>
+<p><strong>Since</strong><br/>
+2019-10-22</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="on-view-interacted.html">onViewInteracted</a></h4>
+</td>
+<td>
+<p>interface for subject to sent notification and for observer to implementation</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">onViewInteracted</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.listener.OnRecyclerViewInteractedListener$onViewInteracted(android.view.View, sg.edu.ntu.scse.cz2006.gymbuddies.listener.OnRecyclerViewInteractedListener.T, kotlin.Int)/view">view</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.listener.OnRecyclerViewInteractedListener$onViewInteracted(android.view.View, sg.edu.ntu.scse.cz2006.gymbuddies.listener.OnRecyclerViewInteractedListener.T, kotlin.Int)/holder">holder</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.listener.OnRecyclerViewInteractedListener$onViewInteracted(android.view.View, sg.edu.ntu.scse.cz2006.gymbuddies.listener.OnRecyclerViewInteractedListener.T, kotlin.Int)/action">action</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.ui.bdlist/-buddy-list-fragment/index.html">BuddyListFragment</a></h4>
+</td>
+<td>
+<p>The fragment display list of buddies (favoured user) of current user it allow user to view profile information, start chat and un-favour of user</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BuddyListFragment</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Fragment</span><span class="symbol">, </span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies/-app-constants/index.html"><span class="identifier">AppConstants</span></a><span class="symbol">, </span><a href="./index.html"><span class="identifier">OnRecyclerViewInteractedListener</span></a><span class="symbol">&lt;</span><span class="identifier">ViewHolder</span><span class="symbol">!</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies/-buddy-search-result-activity/index.html">BuddySearchResultActivity</a></h4>
+</td>
+<td>
+<p>This is the display buddy search result it gets searching condition from Search buddies fragment, and perform query to Firestore After getting response, it display other users on Recycler view. User can then interact and add them as buddy</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BuddySearchResultActivity</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">AppCompatActivity</span><span class="symbol">, </span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies/-app-constants/index.html"><span class="identifier">AppConstants</span></a><span class="symbol">, </span><a href="./index.html"><span class="identifier">OnRecyclerViewInteractedListener</span></a><span class="symbol">&lt;</span><span class="identifier">ViewHolder</span><span class="symbol">!</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies/-chat-activity/index.html">ChatActivity</a></h4>
+</td>
+<td>
+<p>The Activity displaying chat history between another user, and allows user to sent and receive message.</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ChatActivity</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">AppCompatActivity</span><span class="symbol">, </span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies/-app-constants/index.html"><span class="identifier">AppConstants</span></a><span class="symbol">, </span><a href="https://developer.android.com/reference/android/view/View/OnClickListener.html"><span class="identifier">OnClickListener</span></a><span class="symbol">, </span><a href="./index.html"><span class="identifier">OnRecyclerViewInteractedListener</span></a><span class="symbol">&lt;</span><span class="identifier">ViewHolder</span><span class="symbol">!</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.ui.chatlist/-chat-list-fragment/index.html">ChatListFragment</a></h4>
+</td>
+<td>
+<p>The fragment display list of buddies (favoured user) of current user it allow user to view profile information, start chat and un-favour of user</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ChatListFragment</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Fragment</span><span class="symbol">, </span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies/-app-constants/index.html"><span class="identifier">AppConstants</span></a><span class="symbol">, </span><a href="./index.html"><span class="identifier">OnRecyclerViewInteractedListener</span></a><span class="symbol">&lt;</span><span class="identifier">ChatViewHolder</span><span class="symbol">!</span><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

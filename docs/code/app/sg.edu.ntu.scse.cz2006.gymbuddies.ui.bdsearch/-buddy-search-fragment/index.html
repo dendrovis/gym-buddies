@@ -1,0 +1,113 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>BuddySearchFragment - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">sg.edu.ntu.scse.cz2006.gymbuddies.ui.bdsearch</a>&nbsp;/&nbsp;<a href="./index.html">BuddySearchFragment</a><br/>
+<br/>
+<h1>BuddySearchFragment</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BuddySearchFragment</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Fragment</span></code>
+<p>The fragment display search options for gym buddies</p>
+<p><strong>Author</strong><br/>
+Chia Yu</p>
+<p><strong>Since</strong><br/>
+2019-09-06</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>The fragment display search options for gym buddies</p>
+<code><span class="identifier">BuddySearchFragment</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="btn-search.html">btnSearch</a></h4>
+</td>
+<td>
+<p>View reference to search button</p>
+<code><span class="keyword">var </span><span class="identifier">btnSearch</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/widget/Button.html"><span class="identifier">Button</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="buddy-search-view-model.html">buddySearchViewModel</a></h4>
+</td>
+<td>
+<p>view model to separate data from activity life cycle</p>
+<code><span class="keyword">var </span><span class="identifier">buddySearchViewModel</span><span class="symbol">: </span><a href="../-buddy-search-view-model/index.html"><span class="identifier">BuddySearchViewModel</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="ll-pref-days.html">llPrefDays</a></h4>
+</td>
+<td>
+<p>view reference to view group of preferred workout days</p>
+<code><span class="keyword">var </span><span class="identifier">llPrefDays</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/widget/LinearLayout.html"><span class="identifier">LinearLayout</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="rg-buddy-gender.html">rgBuddyGender</a></h4>
+</td>
+<td>
+<p>view reference to radio group of gender</p>
+<code><span class="keyword">var </span><span class="identifier">rgBuddyGender</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/widget/RadioGroup.html"><span class="identifier">RadioGroup</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="rg-pref-time.html">rgPrefTime</a></h4>
+</td>
+<td>
+<p>view reference to radio group of preferred workout time</p>
+<code><span class="keyword">var </span><span class="identifier">rgPrefTime</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/widget/RadioGroup.html"><span class="identifier">RadioGroup</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="sp-pref-location.html">spPrefLocation</a></h4>
+</td>
+<td>
+<p>view reference to drop down list of location</p>
+<code><span class="keyword">var </span><span class="identifier">spPrefLocation</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/widget/Spinner.html"><span class="identifier">Spinner</span></a><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="get-pref-days.html">getPrefDays</a></h4>
+</td>
+<td>
+<p>convert preferred workout days to int[], where index denote the days, and value(0/1) denote the selection of the day</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getPrefDays</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int-array/index.html"><span class="identifier">IntArray</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-radio-text.html">getRadioText</a></h4>
+</td>
+<td>
+<p>helper method to retrieve selecte radio button text base on radio group provided</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getRadioText</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.bdsearch.BuddySearchFragment$getRadioText(android.widget.RadioGroup)/rg">rg</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/widget/RadioGroup.html"><span class="identifier">RadioGroup</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-create-view.html">onCreateView</a></h4>
+</td>
+<td>
+<p>Android framework lifecycle</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onCreateView</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.bdsearch.BuddySearchFragment$onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)/inflater">inflater</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/LayoutInflater.html"><span class="identifier">LayoutInflater</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.bdsearch.BuddySearchFragment$onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)/container">container</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/ViewGroup.html"><span class="identifier">ViewGroup</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.bdsearch.BuddySearchFragment$onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)/savedInstanceState">savedInstanceState</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/Bundle.html"><span class="identifier">Bundle</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

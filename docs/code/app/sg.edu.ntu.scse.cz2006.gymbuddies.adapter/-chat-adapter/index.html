@@ -1,0 +1,166 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ChatAdapter - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">sg.edu.ntu.scse.cz2006.gymbuddies.adapter</a>&nbsp;/&nbsp;<a href="./index.html">ChatAdapter</a><br/>
+<br/>
+<h1>ChatAdapter</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ChatAdapter</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Adapter</span><span class="symbol">&lt;</span><span class="identifier">ChatViewHolder</span><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>Recycler Adapter for Chat Object For sg.edu.ntu.scse.cz2006.gymbuddies.adapter in Gym Buddies! The adapter is used to display list of chat history of a user</p>
+<p><strong>Author</strong><br/>
+Chia Yu</p>
+<p><strong>Since</strong><br/>
+2019-10-19</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-chat-view-holder/index.html">ChatViewHolder</a></h4>
+</td>
+<td>
+<p>ViewHolder for <code><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-chat/index.html">Chat</a></code> it holds reference to frequent update views and provides helper method to bind data information onto views</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ChatViewHolder</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ViewHolder</span><span class="symbol">, </span><a href="https://developer.android.com/reference/android/view/View/OnClickListener.html"><span class="identifier">OnClickListener</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Constructor method to initialise ChatAdapter</p>
+<code><span class="identifier">ChatAdapter</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.ChatAdapter$<init>(kotlin.collections.MutableList((sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.Chat)), kotlin.collections.MutableList((kotlin.String)))/chats">chats</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span class="identifier">MutableList</span></a><span class="symbol">&lt;</span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-chat/index.html"><span class="identifier">Chat</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.ChatAdapter$<init>(kotlin.collections.MutableList((sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.Chat)), kotlin.collections.MutableList((kotlin.String)))/favUserIds">favUserIds</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span class="identifier">MutableList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-a-c-t-i-o-n_-c-l-i-c-k_-o-n_-f-a-v_-i-t-e-m.html">ACTION_CLICK_ON_FAV_ITEM</a></h4>
+</td>
+<td>
+<p>unique identifier to specify user click on favoured (heart shape) button of display view</p>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">ACTION_CLICK_ON_FAV_ITEM</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-a-c-t-i-o-n_-c-l-i-c-k_-o-n_-i-t-e-m_-b-o-d-y.html">ACTION_CLICK_ON_ITEM_BODY</a></h4>
+</td>
+<td>
+<p>unique identifier to specify user click on item body of display view</p>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">ACTION_CLICK_ON_ITEM_BODY</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-a-c-t-i-o-n_-c-l-i-c-k_-o-n_-i-t-e-m_-p-i-c.html">ACTION_CLICK_ON_ITEM_PIC</a></h4>
+</td>
+<td>
+<p>unique identifier to specify user click on profile picture of display view</p>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">ACTION_CLICK_ON_ITEM_PIC</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-a-c-t-i-o-n_-i-n-v-a-l-i-d.html">ACTION_INVALID</a></h4>
+</td>
+<td>
+<p>unique identifier to specify undefined action</p>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">ACTION_INVALID</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="chats.html">chats</a></h4>
+</td>
+<td>
+<p>list that holds user's chat chat information</p>
+<code><span class="keyword">var </span><span class="identifier">chats</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span class="identifier">MutableList</span></a><span class="symbol">&lt;</span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-chat/index.html"><span class="identifier">Chat</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="fav-user-ids.html">favUserIds</a></h4>
+</td>
+<td>
+<p>it store list of other user's id, used to denote that other user is current user's buddy</p>
+<code><span class="keyword">var </span><span class="identifier">favUserIds</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span class="identifier">MutableList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="listener.html">listener</a></h4>
+</td>
+<td>
+<p>interface that allow activity to observe user interaction with RecyclerView</p>
+<code><span class="keyword">var </span><span class="identifier">listener</span><span class="symbol">: </span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.listener/-on-recycler-view-interacted-listener/index.html"><span class="identifier">OnRecyclerViewInteractedListener</span></a><span class="symbol">&lt;</span><span class="identifier">ChatViewHolder</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="sdf.html">sdf</a></h4>
+</td>
+<td>
+<p>it is used to format timestamp from long to String</p>
+<code><span class="keyword">var </span><span class="identifier">sdf</span><span class="symbol">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html"><span class="identifier">SimpleDateFormat</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-t-a-g.html">TAG</a></h4>
+</td>
+<td>
+<p>TAG is unique identifier to for logging purpose</p>
+<code><span class="keyword">var </span><span class="identifier">TAG</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="get-item-count.html">getItemCount</a></h4>
+</td>
+<td>
+<p>the method is return number of messages to be display on RecyclerView</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getItemCount</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-bind-view-holder.html">onBindViewHolder</a></h4>
+</td>
+<td>
+<p>this method make use of view holder to update display information onto the view</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onBindViewHolder</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.ChatAdapter$onBindViewHolder(sg.edu.ntu.scse.cz2006.gymbuddies.adapter.ChatAdapter.ChatViewHolder, kotlin.Int)/holder">holder</span><span class="symbol">:</span>&nbsp;<span class="identifier">ChatViewHolder</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.ChatAdapter$onBindViewHolder(sg.edu.ntu.scse.cz2006.gymbuddies.adapter.ChatAdapter.ChatViewHolder, kotlin.Int)/position">position</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-create-view-holder.html">onCreateViewHolder</a></h4>
+</td>
+<td>
+<p>the method based on view type to render a view and associate the view with respective view holder</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onCreateViewHolder</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.ChatAdapter$onCreateViewHolder(android.view.ViewGroup, kotlin.Int)/parent">parent</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/ViewGroup.html"><span class="identifier">ViewGroup</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.ChatAdapter$onCreateViewHolder(android.view.ViewGroup, kotlin.Int)/viewType">viewType</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ChatViewHolder</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-fav-user-ids.html">setFavUserIds</a></h4>
+</td>
+<td>
+<p>setter method to update list of favouried</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setFavUserIds</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.ChatAdapter$setFavUserIds(kotlin.collections.MutableList((kotlin.String)))/favUserIds">favUserIds</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span class="identifier">MutableList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-on-recycler-view-clicked-listener.html">setOnRecyclerViewClickedListener</a></h4>
+</td>
+<td>
+<p>The method provides an interface to allow other class to register itself as observer of user interacting event</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setOnRecyclerViewClickedListener</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.ChatAdapter$setOnRecyclerViewClickedListener(sg.edu.ntu.scse.cz2006.gymbuddies.listener.OnRecyclerViewInteractedListener((sg.edu.ntu.scse.cz2006.gymbuddies.adapter.ChatAdapter.ChatViewHolder)))/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.listener/-on-recycler-view-interacted-listener/index.html"><span class="identifier">OnRecyclerViewInteractedListener</span></a><span class="symbol">&lt;</span><span class="identifier">ChatViewHolder</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

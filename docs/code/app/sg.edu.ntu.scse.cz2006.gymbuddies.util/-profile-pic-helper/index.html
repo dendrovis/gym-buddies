@@ -1,0 +1,85 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ProfilePicHelper - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">sg.edu.ntu.scse.cz2006.gymbuddies.util</a>&nbsp;/&nbsp;<a href="./index.html">ProfilePicHelper</a><br/>
+<br/>
+<h1>ProfilePicHelper</h1>
+<code><span class="keyword">object </span><span class="identifier">ProfilePicHelper</span></code>
+<p>Helper class for handling profile pictures in the application</p>
+<p>For sg.edu.ntu.scse.cz2006.gymbuddies.util in Gym Buddies!</p>
+<p><strong>Author</strong><br/>
+Kenneth Soh</p>
+<p><strong>Since</strong><br/>
+2019-09-09</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-profile-pic-one-time-listener/index.html">ProfilePicOneTimeListener</a></h4>
+</td>
+<td>
+<p>Internal interface for Profile Picture One Time Listener</p>
+<code><span class="keyword">interface </span><span class="identifier">ProfilePicOneTimeListener</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="profile-pic.html">profilePic</a></h4>
+</td>
+<td>
+<p>A global profile picture storeage area</p>
+<code><span class="keyword">var </span><span class="identifier">profilePic</span><span class="symbol">: </span><span class="identifier">RoundedBitmapDrawable</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="profile-pic-update-listener.html">profilePicUpdateListener</a></h4>
+</td>
+<td>
+<p>Add to this list if you wish to receive an update when the profile pic updates</p>
+<code><span class="keyword">val </span><span class="identifier">profilePicUpdateListener</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><span class="identifier">ProfilePicOneTimeListener</span><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="get-bitmap.html">getBitmap</a></h4>
+</td>
+<td>
+<p>Internal method to generate a bitmap from a <a href="get-bitmap.html#sg.edu.ntu.scse.cz2006.gymbuddies.util.ProfilePicHelper$getBitmap(android.graphics.drawable.VectorDrawable)/vectorDrawable">vectorDrawable</a></p>
+<code><span class="keyword">fun </span><span class="identifier">getBitmap</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.util.ProfilePicHelper$getBitmap(android.graphics.drawable.VectorDrawable)/vectorDrawable">vectorDrawable</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/graphics/drawable/VectorDrawable.html"><span class="identifier">VectorDrawable</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/graphics/Bitmap.html"><span class="identifier">Bitmap</span></a></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">getBitmap</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.util.ProfilePicHelper$getBitmap(androidx.vectordrawable.graphics.drawable.VectorDrawableCompat)/vectorDrawable">vectorDrawable</span><span class="symbol">:</span>&nbsp;<span class="identifier">VectorDrawableCompat</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/graphics/Bitmap.html"><span class="identifier">Bitmap</span></a></code>
+<p>Generates a bitmap from a <a href="get-bitmap.html#sg.edu.ntu.scse.cz2006.gymbuddies.util.ProfilePicHelper$getBitmap(android.content.Context, kotlin.Int)/drawableResId">drawableResId</a> in the app drawable folder. Requires an application <a href="get-bitmap.html#sg.edu.ntu.scse.cz2006.gymbuddies.util.ProfilePicHelper$getBitmap(android.content.Context, kotlin.Int)/context">context</a> to use</p>
+<code><span class="keyword">fun </span><span class="identifier">getBitmap</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.util.ProfilePicHelper$getBitmap(android.content.Context, kotlin.Int)/context">context</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.util.ProfilePicHelper$getBitmap(android.content.Context, kotlin.Int)/drawableResId">drawableResId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/graphics/Bitmap.html"><span class="identifier">Bitmap</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-image-bitmap.html">getImageBitmap</a></h4>
+</td>
+<td>
+<p>Generates a bitmap given a <a href="get-image-bitmap.html#sg.edu.ntu.scse.cz2006.gymbuddies.util.ProfilePicHelper$getImageBitmap(kotlin.String)/url">url</a> to the image to download and generate</p>
+<code><span class="keyword">fun </span><span class="identifier">getImageBitmap</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.util.ProfilePicHelper$getImageBitmap(kotlin.String)/url">url</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/graphics/Bitmap.html"><span class="identifier">Bitmap</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="update-call.html">updateCall</a></h4>
+</td>
+<td>
+<p>Internal method called after updating the profile pic</p>
+<code><span class="keyword">fun </span><span class="identifier">updateCall</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

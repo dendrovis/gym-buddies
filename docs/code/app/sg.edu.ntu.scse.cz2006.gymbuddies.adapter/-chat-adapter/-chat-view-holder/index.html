@@ -1,0 +1,93 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ChatAdapter.ChatViewHolder - app</title>
+<link rel="stylesheet" href="../../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../../index.html">app</a>&nbsp;/&nbsp;<a href="../../index.html">sg.edu.ntu.scse.cz2006.gymbuddies.adapter</a>&nbsp;/&nbsp;<a href="../index.html">ChatAdapter</a>&nbsp;/&nbsp;<a href="./index.html">ChatViewHolder</a><br/>
+<br/>
+<h1>ChatViewHolder</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ChatViewHolder</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ViewHolder</span><span class="symbol">, </span><a href="https://developer.android.com/reference/android/view/View/OnClickListener.html"><span class="identifier">OnClickListener</span></a></code>
+<p>ViewHolder for <code><a href="../../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-chat/index.html">Chat</a></code> it holds reference to frequent update views and provides helper method to bind data information onto views</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>constructor method that initialised the view holder by keeping reference to most frequent update views</p>
+<code><span class="identifier">ChatViewHolder</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.ChatAdapter.ChatViewHolder$<init>(android.view.View)/itemView">itemView</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="cb-fav.html">cbFav</a></h4>
+</td>
+<td>
+<p>CheckBox button that denote the another user involved is buddy of current user</p>
+<code><span class="keyword">var </span><span class="identifier">cbFav</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/widget/CheckBox.html"><span class="identifier">CheckBox</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="img-pic.html">imgPic</a></h4>
+</td>
+<td>
+<p>icon for chat, usually display other user's profile picture</p>
+<code><span class="keyword">var </span><span class="identifier">imgPic</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/widget/ImageView.html"><span class="identifier">ImageView</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="tv-last-msg.html">tvLastMsg</a></h4>
+</td>
+<td>
+<p>last message of the chat</p>
+<code><span class="keyword">var </span><span class="identifier">tvLastMsg</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/widget/TextView.html"><span class="identifier">TextView</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="tv-name.html">tvName</a></h4>
+</td>
+<td>
+<p>name of the chat, usually display name of another user involved in chat</p>
+<code><span class="keyword">var </span><span class="identifier">tvName</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/widget/TextView.html"><span class="identifier">TextView</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="tv-update-time.html">tvUpdateTime</a></h4>
+</td>
+<td>
+<p>formatted timestamp for chat's last update time</p>
+<code><span class="keyword">var </span><span class="identifier">tvUpdateTime</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/widget/TextView.html"><span class="identifier">TextView</span></a><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="bind.html">bind</a></h4>
+</td>
+<td>
+<p>helper method to bind <code><a href="../../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-chat/index.html">Chat</a></code> onto item view</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">bind</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.ChatAdapter.ChatViewHolder$bind(sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.Chat)/chat">chat</span><span class="symbol">:</span>&nbsp;<a href="../../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-chat/index.html"><span class="identifier">Chat</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-click.html">onClick</a></h4>
+</td>
+<td>
+<p>catch user click event, and update observer via <code><a href="../listener.html">#listener</a></code></p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onClick</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.ChatAdapter.ChatViewHolder$onClick(android.view.View)/v">v</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

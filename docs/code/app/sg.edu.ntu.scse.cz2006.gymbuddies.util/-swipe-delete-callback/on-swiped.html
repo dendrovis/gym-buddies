@@ -1,0 +1,35 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SwipeDeleteCallback.onSwiped - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">sg.edu.ntu.scse.cz2006.gymbuddies.util</a>&nbsp;/&nbsp;<a href="index.html">SwipeDeleteCallback</a>&nbsp;/&nbsp;<a href="./on-swiped.html">onSwiped</a><br/>
+<br/>
+<h1>onSwiped</h1>
+<a name="sg.edu.ntu.scse.cz2006.gymbuddies.util.SwipeDeleteCallback$onSwiped(androidx.recyclerview.widget.RecyclerView.ViewHolder, kotlin.Int)"></a>
+<code><span class="keyword">fun </span><span class="identifier">onSwiped</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.util.SwipeDeleteCallback$onSwiped(androidx.recyclerview.widget.RecyclerView.ViewHolder, kotlin.Int)/viewHolder">viewHolder</span><span class="symbol">:</span>&nbsp;<span class="identifier">ViewHolder</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.util.SwipeDeleteCallback$onSwiped(androidx.recyclerview.widget.RecyclerView.ViewHolder, kotlin.Int)/direction">direction</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Called when a ViewHolder is swiped by the user.</p>
+<p>If you are returning relative directions ({@link #START} , {@link #END}) from the
+{@link #getMovementFlags(RecyclerView, ViewHolder)} method, this method
+will also use relative directions. Otherwise, it will use absolute directions.</p>
+<p>If you don't support swiping, this method will never be called.</p>
+<p>ItemTouchHelper will keep a reference to the View until it is detached from
+RecyclerView.
+As soon as it is detached, ItemTouchHelper will call
+{@link #clearView(RecyclerView, ViewHolder)}.</p>
+<h3>Parameters</h3>
+<p><a name="viewHolder"></a>
+<code>viewHolder</code> - The ViewHolder which has been swiped by the user.</p>
+<p><a name="direction"></a>
+<code>direction</code> - The direction to which the ViewHolder is swiped. It is one of
+    {@link #UP}, {@link #DOWN},
+    {@link #LEFT} or {@link #RIGHT}. If your
+    {@link #getMovementFlags(RecyclerView, ViewHolder)}
+    method
+    returned relative flags instead of {@link #LEFT} / {@link #RIGHT};
+    <code>direction</code> will be relative as well. ({@link #START} or {@link
+    #END}).</p>
+</BODY>
+</HTML>

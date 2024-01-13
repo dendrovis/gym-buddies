@@ -1,0 +1,92 @@
+<resources>
+    <string name="app_name">Gym Buddies!</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="email_placeholder">sundarpichai@google.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <!--    <string name="menu_gallery">Gallery</string>-->
+    <!--    <string name="menu_slideshow">Slideshow</string>-->
+    <!--    <string name="menu_tools">Tools</string>-->
+    <!--    <string name="menu_share">Share</string>-->
+    <!--    <string name="menu_send">Send</string>-->
+
+    <string name="menu_gym_list">Favourite GYM</string>
+    <string name="menu_bd_list">Buddy List</string>
+    <string name="menu_bd_search">Buddy Search</string>
+    <string name="menu_chat_list">Chat</string>
+    <string name="menu_feedback">Feedback</string>
+
+    <string name="txt_day1_short">Mon</string>
+    <string name="txt_day2_short">Tue</string>
+    <string name="txt_day3_short">Wed</string>
+    <string name="txt_day4_short">Thu</string>
+    <string name="txt_day5_short">Fri</string>
+    <string name="txt_day6_short">Sat</string>
+    <string name="txt_day7_short">Sun</string>
+
+
+    <string name="txt_search">Search</string>
+    <string name="txt_both">Both</string>
+    <string name="txt_male">Male</string>
+    <string name="txt_female">Female</string>
+    <string name="txt_am">AM</string>
+    <string name="txt_pm">PM</string>
+    <string name="txt_pref_time">Preferred Time</string>
+    <string name="txt_pref_location">Preferred Location</string>
+    <string name="txt_buddy_gender">Buddy gender</string>
+    <string name="txt_pref_dym_days">Preferred workout days</string>
+    <string name="logout">Log Out</string>
+    <string name="action_search">Search</string>
+    <string name="title_activity_settings">App Settings</string>
+    <string name="title_activity_buddy_search_result">Buddy Search Result</string>
+    <string name="txt_nothing_to_display">Nothing to display</string>
+
+    <!-- Preference Titles -->
+    <string name="general_header">General Settings</string>
+    <string name="app_header">App Info</string>
+    <string name="dev_header">Developer Options</string>
+
+    <!-- Preferences -->
+    <string name="placeholder_title">Preference Title</string>
+    <string name="placeholder_pref">Preference Description</string>
+    <string name="about_app">About this app</string>
+    <string name="about_app_desc">Find out more info about this app and the team behind it</string>
+    <string name="crash_test_title">Force a crash</string>
+    <string name="crash_test_desc">Forces a crash of the application</string>
+    <string name="nearby_gym_count_title">Nearby Gyms Count</string>
+    <string name="value_placeholder">%s</string>
+    <string name="gym_desc_placeholder_rant">This gym has no features and is extremely horrible and why in the world did they even make a hall gym the main gym in NTU ._.</string>
+    <string name="gym_details_loc_placeholder">60 Nanyang Crescent, Level 3, 19A Binjal Hall of Residence, Nanyang Technological University, SG</string>
+    <string name="view_nearby_carparks">View Carparks nearby</string>
+    <string name="favourite">Favourite</string>
+    <string name="nearby_carpark">Nearby Carparks</string>
+    <string name="number_placeholder">(???)</string>
+    <string name="number_counter">(%1$d)</string>
+    <string name="gym_detail_title_placeholder">North Hill Gym</string>
+    <string name="gym_detail_rating_placeholder">1.0</string>
+    <string name="drag_bar_content_desc">Drag Bar</string>
+    <string name="coming_soon_feature">(WIP) Feature is coming soon!</string>
+    <string name="gym_reviews">Gym Reviews</string>
+    <string name="rate_review_btn">Rate and Review Gym</string>
+    <string name="gym_details_fav_icon_content_desc">A heart</string>
+    <string name="gym_details_car_icon_content_desc">Nearby Carpark</string>
+    <string name="fav_list_header">Favourite Gyms</string>
+    <string name="date_placeholder">01/01/70</string>
+    <string name="name_placeholder">Sundar Pichai</string>
+
+    <string name="txt_undo">Undo</string>
+    <string name="txt_msg_removed_favourite">Removed from favourite</string>
+    <string name="txt_msg_removed_favtorite_undone">Removed from favourite undone</string>
+    <string name="cp_details_lots_placeholder">Lots Available: 500</string>
+    <string name="cp_details_price_placeholder">Free Parking on Sundays and Public Holidays \nHourly Parking from 7-10 \nNight Parking available</string>
+    <string name="cp_details_height_placeholder">No Height Limit</string>
+    <string name="cp_details_desc_placeholder">Other Miscellaneous Information like underground</string>
+    <string name="cp_details_cpid">Carpark ID</string>
+    <string name="cp_details_direction_contentdesc">Directions to CP</string>
+    <string name="cp_details_direction">Directions to Carpark</string>
+
+</resources>

@@ -1,0 +1,83 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>GymList - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">sg.edu.ntu.scse.cz2006.gymbuddies.datastruct</a>&nbsp;/&nbsp;<a href="./index.html">GymList</a><br/>
+<br/>
+<h1>GymList</h1>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">GymList</span></code>
+<p>Data Structure to store the data from the gym JSON file
+Note that this is just an outer shell. Access <a href="gyms.html">gyms</a> for the actual data
+For sg.edu.ntu.scse.cz2006.gymbuddies.datastruct in Gym Buddies!</p>
+<p><strong>Author</strong><br/>
+Kenneth Soh</p>
+<p><strong>Since</strong><br/>
+2019-09-17</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-gym-geometry/index.html">GymGeometry</a></h4>
+</td>
+<td>
+<p>Inner class containing the latitude and longitude of the gym location</p>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">GymGeometry</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-gym-properties/index.html">GymProperties</a></h4>
+</td>
+<td>
+<p>Inner class containing all of the gym properties</p>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">GymProperties</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-gym-shell/index.html">GymShell</a></h4>
+</td>
+<td>
+<p>Inner class to handle the gym objects from the JSON file</p>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">GymShell</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Creates the object that is used to store the data from the JSON file</p>
+<code><span class="identifier">GymList</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.GymList$<init>(kotlin.String, java.util.ArrayList((sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.GymList.GymShell)))/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;""<span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.GymList$<init>(kotlin.String, java.util.ArrayList((sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.GymList.GymShell)))/gyms">gyms</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><span class="identifier">GymShell</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;ArrayList()<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="gyms.html">gyms</a></h4>
+</td>
+<td>
+<p>ArrayList List of all gyms</p>
+<code><span class="keyword">val </span><span class="identifier">gyms</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><span class="identifier">GymShell</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="name.html">name</a></h4>
+</td>
+<td>
+<p>Name of the dataset</p>
+<code><span class="keyword">val </span><span class="identifier">name</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

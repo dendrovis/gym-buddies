@@ -1,0 +1,120 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>StringRecyclerAdapter - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">sg.edu.ntu.scse.cz2006.gymbuddies.adapter</a>&nbsp;/&nbsp;<a href="./index.html">StringRecyclerAdapter</a><br/>
+<br/>
+<h1>StringRecyclerAdapter</h1>
+<code><span class="keyword">class </span><span class="identifier">StringRecyclerAdapter</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Adapter</span><span class="symbol">&lt;</span><span class="identifier">StringViewHolder</span><span class="symbol">&gt;</span></code>
+<p>Recycler Adapter for Strings of text
+For sg.edu.ntu.scse.cz2006.gymbuddies.adapter in Gym Buddies!</p>
+<p><strong>Author</strong><br/>
+Kenneth Soh</p>
+<p><strong>Since</strong><br/>
+2019-09-17</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-string-view-holder/index.html">StringViewHolder</a></h4>
+</td>
+<td>
+<p>Inner class to store the string data in</p>
+<code><span class="keyword">inner</span> <span class="keyword">class </span><span class="identifier">StringViewHolder</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ViewHolder</span><span class="symbol">, </span><a href="https://developer.android.com/reference/android/view/View/OnClickListener.html"><span class="identifier">OnClickListener</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Creates a adapter for the Gym Favourites List RecyclerView</p>
+<code><span class="identifier">StringRecyclerAdapter</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.StringRecyclerAdapter$<init>(kotlin.collections.List((kotlin.String)))/string">string</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">)</span></code><br/>
+<code><span class="identifier">StringRecyclerAdapter</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.StringRecyclerAdapter$<init>(kotlin.collections.List((kotlin.String)), kotlin.Boolean)/string">string</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.StringRecyclerAdapter$<init>(kotlin.collections.List((kotlin.String)), kotlin.Boolean)/announce">announce</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="announce.html">announce</a></h4>
+</td>
+<td>
+<p>Boolean Whether to display a toast message in onClick or not</p>
+<code><span class="keyword">var </span><span class="identifier">announce</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-click-listener.html">onClickListener</a></h4>
+</td>
+<td>
+<p>OnClickListener? Set this to override the default onClick listener defined in <a href="-string-view-holder/on-click.html">StringRecyclerAdapter.StringViewHolder.onClick</a></p>
+<code><span class="keyword">var </span><span class="identifier">onClickListener</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/view/View/OnClickListener.html"><span class="identifier">OnClickListener</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="string-list.html">stringList</a></h4>
+</td>
+<td>
+<p>List The list of all strings to display</p>
+<code><span class="keyword">var </span><span class="identifier">stringList</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="get-item-count.html">getItemCount</a></h4>
+</td>
+<td>
+<p>Gets the number of strings stored in this adapter</p>
+<code><span class="keyword">fun </span><span class="identifier">getItemCount</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-bind-view-holder.html">onBindViewHolder</a></h4>
+</td>
+<td>
+<p>Internal function to bind the view <a href="on-bind-view-holder.html#sg.edu.ntu.scse.cz2006.gymbuddies.adapter.StringRecyclerAdapter$onBindViewHolder(sg.edu.ntu.scse.cz2006.gymbuddies.adapter.StringRecyclerAdapter.StringViewHolder, kotlin.Int)/holder">holder</a> at the current RecyclerView <a href="on-bind-view-holder.html#sg.edu.ntu.scse.cz2006.gymbuddies.adapter.StringRecyclerAdapter$onBindViewHolder(sg.edu.ntu.scse.cz2006.gymbuddies.adapter.StringRecyclerAdapter.StringViewHolder, kotlin.Int)/position">position</a> to a specific data</p>
+<code><span class="keyword">fun </span><span class="identifier">onBindViewHolder</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.StringRecyclerAdapter$onBindViewHolder(sg.edu.ntu.scse.cz2006.gymbuddies.adapter.StringRecyclerAdapter.StringViewHolder, kotlin.Int)/holder">holder</span><span class="symbol">:</span>&nbsp;<span class="identifier">StringViewHolder</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.StringRecyclerAdapter$onBindViewHolder(sg.edu.ntu.scse.cz2006.gymbuddies.adapter.StringRecyclerAdapter.StringViewHolder, kotlin.Int)/position">position</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-create-view-holder.html">onCreateViewHolder</a></h4>
+</td>
+<td>
+<p>Creates the required View Holder to store the data in</p>
+<code><span class="keyword">fun </span><span class="identifier">onCreateViewHolder</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.StringRecyclerAdapter$onCreateViewHolder(android.view.ViewGroup, kotlin.Int)/parent">parent</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/ViewGroup.html"><span class="identifier">ViewGroup</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.StringRecyclerAdapter$onCreateViewHolder(android.view.ViewGroup, kotlin.Int)/viewType">viewType</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">StringViewHolder</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-on-click-listener.html">setOnClickListener</a></h4>
+</td>
+<td>
+<p>Overrides the default on click <a href="set-on-click-listener.html#sg.edu.ntu.scse.cz2006.gymbuddies.adapter.StringRecyclerAdapter$setOnClickListener(android.view.View.OnClickListener)/listener">listener</a></p>
+<code><span class="keyword">fun </span><span class="identifier">setOnClickListener</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.StringRecyclerAdapter$setOnClickListener(android.view.View.OnClickListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/View/OnClickListener.html"><span class="identifier">OnClickListener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="update-strings.html">updateStrings</a></h4>
+</td>
+<td>
+<p>Updates internal string list</p>
+<code><span class="keyword">fun </span><span class="identifier">updateStrings</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.StringRecyclerAdapter$updateStrings(kotlin.collections.List((kotlin.String)))/newString">newString</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

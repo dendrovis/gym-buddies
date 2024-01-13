@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:orientation="horizontal"
+    android:id="@+id/gym_details_sheet"
+    android:background="?android:attr/selectableItemBackground"
+    android:paddingTop="4dp"
+    android:clipToPadding="true"
+    android:clickable="true"
+    android:focusable="true">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.3" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gym_detail_title_placeholder"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            app:fontFamily="@font/google_product_sans"
+            android:ellipsize="end"
+            android:id="@+id/fav_list_title"
+            android:textColor="#000000" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatRatingBar
+                style="@style/Base.Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/fav_list_rating"
+                android:numStars="5"
+                android:rating="1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="4dp"
+                android:id="@+id/fav_list_rating_avg"
+                android:text="@string/gym_detail_rating_placeholder" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:id="@+id/fav_list_rating_count"
+                android:text="@string/number_placeholder" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/gym_details_fav_icon_content_desc"
+                android:tintMode="src_atop"
+                android:layout_marginStart="12dp"
+                android:tint="#FF0000"
+                app:srcCompat="@drawable/ic_heart" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:id="@+id/fav_list_favourites"
+                android:text="@string/number_placeholder" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,30 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SVY21.computeLatLon - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">sg.edu.ntu.scse.cz2006.gymbuddies.util.svy21converter</a>&nbsp;/&nbsp;<a href="index.html">SVY21</a>&nbsp;/&nbsp;<a href="./compute-lat-lon.html">computeLatLon</a><br/>
+<br/>
+<h1>computeLatLon</h1>
+<a name="sg.edu.ntu.scse.cz2006.gymbuddies.util.svy21converter.SVY21$computeLatLon(kotlin.Double, kotlin.Double)"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">computeLatLon</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.util.svy21converter.SVY21$computeLatLon(kotlin.Double, kotlin.Double)/N">N</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.util.svy21converter.SVY21$computeLatLon(kotlin.Double, kotlin.Double)/E">E</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-lat-lon-coordinate/index.html"><span class="identifier">LatLonCoordinate</span></a><span class="symbol">!</span></code>
+<p>Computes Latitude and Longitude based on an SVY21 coordinate. This method returns an immutable LatLonCoordiante object that contains two fields, latitude, accessible with .getLatitude(), and longitude, accessible with .getLongitude().</p>
+<h3>Parameters</h3>
+<p><a name="N"></a>
+<code>N</code> - <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a><span class="symbol">:</span> Northing based on SVY21.</p>
+<p><a name="E"></a>
+<code>E</code> - <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a><span class="symbol">:</span> Easting based on SVY21.</p>
+<p><strong>Return</strong><br/>
+<a href="../-lat-lon-coordinate/index.html"><span class="identifier">LatLonCoordinate</span></a><span class="symbol">!</span><span class="symbol">:</span> the conversion result a LatLonCoordinate.</p>
+<a name="sg.edu.ntu.scse.cz2006.gymbuddies.util.svy21converter.SVY21$computeLatLon(sg.edu.ntu.scse.cz2006.gymbuddies.util.svy21converter.SVY21Coordinate)"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">computeLatLon</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.util.svy21converter.SVY21$computeLatLon(sg.edu.ntu.scse.cz2006.gymbuddies.util.svy21converter.SVY21Coordinate)/coord">coord</span><span class="symbol">:</span>&nbsp;<a href="../-s-v-y21-coordinate/index.html"><span class="identifier">SVY21Coordinate</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-lat-lon-coordinate/index.html"><span class="identifier">LatLonCoordinate</span></a><span class="symbol">!</span></code>
+<p>Computes Latitude and Longitude based on an SVY21 coordinate. This method returns an immutable LatLonCoordiante object that contains two fields, latitude, accessible with .getLatitude(), and longitude, accessible with .getLongitude(). This method is a shorthand for the functionally identical public LatLonCoordinate computeLatLon(double N, double E).</p>
+<h3>Parameters</h3>
+<p><a name="coord"></a>
+<code>coord</code> - <a href="../-s-v-y21-coordinate/index.html"><span class="identifier">SVY21Coordinate</span></a><span class="symbol">!</span><span class="symbol">:</span> an SVY21Coordinate object to convert.</p>
+<p><strong>Return</strong><br/>
+<a href="../-lat-lon-coordinate/index.html"><span class="identifier">LatLonCoordinate</span></a><span class="symbol">!</span><span class="symbol">:</span> the conversion result a LatLonCoordinate.</p>
+</BODY>
+</HTML>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory app:title="@string/dev_header">
+        <Preference app:key="crash" app:title="@string/crash_test_title" app:summary="@string/crash_test_desc" />
+        <SwitchPreferenceCompat app:key="debug_mode" app:title="Debug Mode" app:defaultValue="false" />
+        <Preference app:key="buildinfo" app:title="Build Info" />
+    </PreferenceCategory>
+</PreferenceScreen>

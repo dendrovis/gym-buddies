@@ -1,0 +1,39 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CarParkDao - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">sg.edu.ntu.scse.cz2006.gymbuddies.data</a>&nbsp;/&nbsp;<a href="./index.html">CarParkDao</a><br/>
+<br/>
+<h1>CarParkDao</h1>
+<code><span class="keyword">interface </span><span class="identifier">CarParkDao</span></code>
+<p>Data Accessing Object for entity 'hdbcarparks' in the Room database.</p>
+<p><strong>Author</strong><br/>
+Chia Yu</p>
+<p><strong>Since</strong><br/>
+2019-09-14</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="get-all-car-parks.html">getAllCarParks</a></h4>
+</td>
+<td>
+<p>getting list of all car parks in room database</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getAllCarParks</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span class="identifier">MutableList</span></a><span class="symbol">&lt;</span><a href="../-car-park/index.html"><span class="identifier">CarPark</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-all-car-parks-now.html">getAllCarParksNow</a></h4>
+</td>
+<td>
+<p>Get a list of all carparks from the database</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getAllCarParksNow</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span class="identifier">MutableList</span></a><span class="symbol">&lt;</span><a href="../-car-park/index.html"><span class="identifier">CarPark</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<about>
+    <me.jfenn.attribouter.wedges.AppWedge
+        description="A gym buddy finding app (NTU CZ2006 SE Project for Team UnderConstruction)"
+        icon="@mipmap/ic_launcher">
+        <me.jfenn.attribouter.wedges.link.LinkWedge
+            name="GitLab"
+            icon="@drawable/ic_gitlab"
+            priority="-1"
+            url="https://gitlab.com/kennethsohyq/school/university/ntu-cz2006-underconstruction" />
+    </me.jfenn.attribouter.wedges.AppWedge>
+
+    <me.jfenn.attribouter.wedges.ContributorsWedge
+        showDefaults="false"
+        title="Team Members">
+
+        <!-- Team Lead: Rainyillusionist -->
+        <me.jfenn.attribouter.wedges.ContributorWedge
+            login="rainyillusionist"
+            name="Francis Lim"
+            email="fran0029@e.ntu.edu.sg"
+            position="1"
+            task="Team Lead">
+            <me.jfenn.attribouter.wedges.link.LinkWedge
+                name="GitLab"
+                icon="@drawable/ic_gitlab"
+                url="https://gitlab.com/rainyillusionist" />
+        </me.jfenn.attribouter.wedges.ContributorWedge>
+
+        <!-- Lead developer: itachi1706 -->
+        <me.jfenn.attribouter.wedges.ContributorWedge
+            login="itachi1706"
+            name="Kenneth Soh"
+            avatar="https://avatars.githubusercontent.com/u/5357412"
+            bio="Cause I'm a potato"
+            blog="https://itachi1706.com"
+            email="sohy0037@e.ntu.edu.sg"
+            position="2"
+            task="Developer">
+            <me.jfenn.attribouter.wedges.link.LinkWedge
+                name="GitLab"
+                icon="@drawable/ic_gitlab"
+                url="https://gitlab.com/itachi1706" />
+        </me.jfenn.attribouter.wedges.ContributorWedge>
+
+        <!-- Developer: ChiaYu -->
+        <!-- TODO: Get the GitHub user account if there is any -->
+        <me.jfenn.attribouter.wedges.ContributorWedge
+            name="Hsiao Chia Yu"
+            avatar="https://secure.gravatar.com/avatar/2f024b769eb1c221da286c6523c23534?s=80&amp;d=identicon"
+            email="chsiao001@e.ntu.edu.sg"
+            bio="TODO"
+            position="3"
+            task="Developer">
+            <me.jfenn.attribouter.wedges.link.LinkWedge
+                name="GitLab"
+                icon="@drawable/ic_gitlab"
+                url="https://gitlab.com/chiayu.dev" />
+        </me.jfenn.attribouter.wedges.ContributorWedge>
+
+        <!-- UI Design: Tan Wei Cong -->
+        <!-- TODO: Get the GitHub user account if there is any -->
+        <me.jfenn.attribouter.wedges.ContributorWedge
+            name="Tan Wei Cong"
+            avatar="https://secure.gravatar.com/avatar/891e1b2a3f74f666c7a7692b767cf08f?s=80&amp;d=identicon"
+            email="tang0413@e.ntu.edu.sg"
+            bio="TODO"
+            task="UI/UX Design">
+            <me.jfenn.attribouter.wedges.link.LinkWedge
+                name="GitLab"
+                icon="@drawable/ic_gitlab"
+                url="https://gitlab.com/tangweicong94" />
+        </me.jfenn.attribouter.wedges.ContributorWedge>
+
+        <!-- Documentation: Sam (Zerlyna) -->
+        <me.jfenn.attribouter.wedges.ContributorWedge
+            login="Zerlyna"
+            name="Sam"
+            email="jsam002@e.ntu.edu.sg"
+            bio="TODO"
+            task="Documentation">
+            <me.jfenn.attribouter.wedges.link.LinkWedge
+                name="GitLab"
+                icon="@drawable/ic_gitlab"
+                url="https://gitlab.com/Zerlyna" />
+        </me.jfenn.attribouter.wedges.ContributorWedge>
+
+        <!-- Documentation: Alson (AlsonKong) -->
+        <me.jfenn.attribouter.wedges.ContributorWedge
+            login="Alsonkong"
+            name="Alson Kong"
+            email="kong0126@e.ntu.edu.sg"
+            bio="TODO"
+            task="Documentation">
+            <me.jfenn.attribouter.wedges.link.LinkWedge
+                name="GitLab"
+                icon="@drawable/ic_gitlab"
+                url="https://gitlab.com/Alsonkong" />
+        </me.jfenn.attribouter.wedges.ContributorWedge>
+    </me.jfenn.attribouter.wedges.ContributorsWedge>
+
+    <me.jfenn.attribouter.wedges.LicensesWedge
+        showDefaults="false">
+
+        <!-- Apache Commons Lang -->
+        <me.jfenn.attribouter.wedges.LicenseWedge
+            title="Apache Commons Text"
+            repo="apache/commons-text"
+            description="^Apache Commons Text is a library focused on algorithms working on strings."
+            website="https://commons.apache.org/proper/commons-text/"
+            license="apache-2.0" />
+
+        <!-- VNT Number Picker Preference -->
+        <me.jfenn.attribouter.wedges.LicenseWedge
+            title="VNT Number Picker Preference"
+            repo="vanniktech/VNTNumberPickerPreference"
+            license="apache-2.0" />
+
+        <!-- Android Room -->
+        <me.jfenn.attribouter.wedges.LicenseWedge
+            title="Room Persistence Library"
+            description="The Room persistence library provides an abstraction layer over SQLite to allow for more robust database access while harnessing the full power of SQLite."
+            website="https://developer.android.com/topic/libraries/architecture/room"
+            licenseUrl="https://android.googlesource.com/platform/frameworks/support/+/androidx-master-dev/LICENSE.txt"
+            license="apache-2.0" />
+
+        <!-- Like Animation (Adaptation) -->
+        <me.jfenn.attribouter.wedges.LicenseWedge
+            title="Twitter Like Animation"
+            repo="frogermcs/LikeAnimation"
+            license="apache-2.0" />
+
+        <!-- FirebaseUI -->
+        <me.jfenn.attribouter.wedges.LicenseWedge
+            title="Firebase UI for Android"
+            repo="firebase/FirebaseUI-Android"
+            license="apache-2.0" />
+
+        <!-- Gson -->
+        <me.jfenn.attribouter.wedges.LicenseWedge
+            title="Google Gson"
+            repo="google/gson"
+            license="apache-2.0" />
+
+        <!-- AndroidX -->
+        <me.jfenn.attribouter.wedges.LicenseWedge
+            title="AndroidX Jetpack Support Libraries"
+            description="AndroidX is the open-source project that the Android team uses to develop, test, package, version and release libraries within Jetpack."
+            website="https://developer.android.com/jetpack/androidx"
+            licenseUrl="https://android.googlesource.com/platform/frameworks/support/+/androidx-master-dev/LICENSE.txt"
+            license="apache-2.0" />
+
+        <!-- Kotlin (lol) -->
+        <me.jfenn.attribouter.wedges.LicenseWedge
+            title="Kotlin"
+            repo="JetBrains/kotlin"
+            license="apache-2.0" />
+
+        <!-- AOSP -->
+        <me.jfenn.attribouter.wedges.LicenseWedge
+            title="Android Open Source Project"
+            description="Android is an open source software stack for a wide range of mobile devices and a corresponding open source project led by Google."
+            website="https://github.com/aosp-mirror"
+            licenseUrl="https://source.android.com/license"
+            license="apache-2.0" />
+
+    </me.jfenn.attribouter.wedges.LicensesWedge>
+</about>

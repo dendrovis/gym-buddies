@@ -1,0 +1,116 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>UpdateGymFavourites - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">sg.edu.ntu.scse.cz2006.gymbuddies.tasks</a>&nbsp;/&nbsp;<a href="./index.html">UpdateGymFavourites</a><br/>
+<br/>
+<h1>UpdateGymFavourites</h1>
+<code><span class="keyword">class </span><span class="identifier">UpdateGymFavourites</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/AsyncTask.html"><span class="identifier">AsyncTask</span></a><span class="symbol">&lt;</span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html"><span class="identifier">Void</span></a><span class="symbol">,</span>&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html"><span class="identifier">Void</span></a><span class="symbol">,</span>&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html"><span class="identifier">Void</span></a><span class="symbol">&gt;</span></code>
+<p>Task to handle updating gym favourites when the favourites button is clicked
+For sg.edu.ntu.scse.cz2006.gymbuddies.tasks in Gym Buddies!</p>
+<p><strong>Author</strong><br/>
+Kenneth Soh</p>
+<p><strong>Since</strong><br/>
+2019-10-02</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-callback/index.html">Callback</a></h4>
+</td>
+<td>
+<p>Internal interface to handle callbacks</p>
+<code><span class="keyword">interface </span><span class="identifier">Callback</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Initializees the task to execute</p>
+<code><span class="identifier">UpdateGymFavourites</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.tasks.UpdateGymFavourites$<init>(android.app.Activity, kotlin.String, kotlin.String, kotlin.Boolean, sg.edu.ntu.scse.cz2006.gymbuddies.tasks.UpdateGymFavourites.Callback)/activity">activity</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/app/Activity.html"><span class="identifier">Activity</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.tasks.UpdateGymFavourites$<init>(android.app.Activity, kotlin.String, kotlin.String, kotlin.Boolean, sg.edu.ntu.scse.cz2006.gymbuddies.tasks.UpdateGymFavourites.Callback)/userid">userid</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.tasks.UpdateGymFavourites$<init>(android.app.Activity, kotlin.String, kotlin.String, kotlin.Boolean, sg.edu.ntu.scse.cz2006.gymbuddies.tasks.UpdateGymFavourites.Callback)/gymId">gymId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.tasks.UpdateGymFavourites$<init>(android.app.Activity, kotlin.String, kotlin.String, kotlin.Boolean, sg.edu.ntu.scse.cz2006.gymbuddies.tasks.UpdateGymFavourites.Callback)/favStatus">favStatus</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.tasks.UpdateGymFavourites$<init>(android.app.Activity, kotlin.String, kotlin.String, kotlin.Boolean, sg.edu.ntu.scse.cz2006.gymbuddies.tasks.UpdateGymFavourites.Callback)/callback">callback</span><span class="symbol">:</span>&nbsp;<span class="identifier">Callback</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="act-ref.html">actRef</a></h4>
+</td>
+<td>
+<p>WeakReference&lt;(android.app.Activity..android.app.Activity?)&gt; A weak reference to the activity</p>
+<code><span class="keyword">val </span><span class="identifier">actRef</span><span class="symbol">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ref/WeakReference.html"><span class="identifier">WeakReference</span></a><span class="symbol">&lt;</span><a href="https://developer.android.com/reference/android/app/Activity.html"><span class="identifier">Activity</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="callback.html">callback</a></h4>
+</td>
+<td>
+<p>Callback Callback to call when task completes</p>
+<code><span class="keyword">val </span><span class="identifier">callback</span><span class="symbol">: </span><span class="identifier">Callback</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="fav-status.html">favStatus</a></h4>
+</td>
+<td>
+<p>Boolean The toggle state (true if we are favouriting, false if you are unfavouriting)</p>
+<code><span class="keyword">val </span><span class="identifier">favStatus</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="gym-id.html">gymId</a></h4>
+</td>
+<td>
+<p>String? The gym being favourited or unfavourited</p>
+<code><span class="keyword">val </span><span class="identifier">gymId</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="userid.html">userid</a></h4>
+</td>
+<td>
+<p>String User ID of the user who clicked the button</p>
+<code><span class="keyword">val </span><span class="identifier">userid</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="do-in-background.html">doInBackground</a></h4>
+</td>
+<td>
+<p>Internal task to execute in the background on a seperate thread</p>
+<code><span class="keyword">fun </span><span class="identifier">doInBackground</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.tasks.UpdateGymFavourites$doInBackground(kotlin.Array((java.lang.Void)))/params">params</span><span class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html"><span class="identifier">Void</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html"><span class="identifier">Void</span></a><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-t-a-g.html">TAG</a></h4>
+</td>
+<td>
+<p>Activity Tag for logs</p>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">TAG</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,99 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>sg.edu.ntu.scse.cz2006.gymbuddies - app</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">app</a>&nbsp;/&nbsp;<a href="./index.html">sg.edu.ntu.scse.cz2006.gymbuddies</a><br/>
+<br/>
+<h2>Package sg.edu.ntu.scse.cz2006.gymbuddies</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-app-constants/index.html">AppConstants</a></h4>
+</td>
+<td>
+<p>Interface to provides application related constants For sg.edu.ntu.scse.cz2006.gymbuddies in Gym Buddies!</p>
+<code><span class="keyword">interface </span><span class="identifier">AppConstants</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-buddy-search-result-activity/index.html">BuddySearchResultActivity</a></h4>
+</td>
+<td>
+<p>This is the display buddy search result it gets searching condition from Search buddies fragment, and perform query to Firestore After getting response, it display other users on Recycler view. User can then interact and add them as buddy</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BuddySearchResultActivity</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">AppCompatActivity</span><span class="symbol">, </span><a href="-app-constants/index.html"><span class="identifier">AppConstants</span></a><span class="symbol">, </span><a href="../sg.edu.ntu.scse.cz2006.gymbuddies.listener/-on-recycler-view-interacted-listener/index.html"><span class="identifier">OnRecyclerViewInteractedListener</span></a><span class="symbol">&lt;</span><span class="identifier">ViewHolder</span><span class="symbol">!</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-carpark-and-search-result-activity/index.html">CarparkAndSearchResultActivity</a></h4>
+</td>
+<td>
+<p>Activity for showing both carpark and search results</p>
+<code><span class="keyword">class </span><span class="identifier">CarparkAndSearchResultActivity</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">AppCompatActivity</span><span class="symbol">, </span><span class="identifier">OnMapReadyCallback</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-chat-activity/index.html">ChatActivity</a></h4>
+</td>
+<td>
+<p>The Activity displaying chat history between another user, and allows user to sent and receive message.</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ChatActivity</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">AppCompatActivity</span><span class="symbol">, </span><a href="-app-constants/index.html"><span class="identifier">AppConstants</span></a><span class="symbol">, </span><a href="https://developer.android.com/reference/android/view/View/OnClickListener.html"><span class="identifier">OnClickListener</span></a><span class="symbol">, </span><a href="../sg.edu.ntu.scse.cz2006.gymbuddies.listener/-on-recycler-view-interacted-listener/index.html"><span class="identifier">OnRecyclerViewInteractedListener</span></a><span class="symbol">&lt;</span><span class="identifier">ViewHolder</span><span class="symbol">!</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-gym-search-activity/index.html">GymSearchActivity</a></h4>
+</td>
+<td>
+<p>Activity used to search for a gym with parameters</p>
+<code><span class="keyword">class </span><span class="identifier">GymSearchActivity</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">AppCompatActivity</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-login-chooser-activity/index.html">LoginChooserActivity</a></h4>
+</td>
+<td>
+<p>This is the main launcher activity that shows up to handle the login page of the application
+There are some flags in this activity</p>
+<code><span class="keyword">class </span><span class="identifier">LoginChooserActivity</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">AppCompatActivity</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-main-activity/index.html">MainActivity</a></h4>
+</td>
+<td>
+<p>The application's main activity This activity will contain data regarding the various fragments and is mainly used for Jetpack</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">MainActivity</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">AppCompatActivity</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-profile-edit-activity/index.html">ProfileEditActivity</a></h4>
+</td>
+<td>
+<p>The activity that is used to handle profile view/edit for a logged in user
+There are a couple of flags that are used here:</p>
+<code><span class="keyword">class </span><span class="identifier">ProfileEditActivity</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">AppCompatActivity</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-settings-activity/index.html">SettingsActivity</a></h4>
+</td>
+<td>
+<p>This activity is used to display the application settings page</p>
+<code><span class="keyword">class </span><span class="identifier">SettingsActivity</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">AppCompatActivity</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-update-user-activity/index.html">UpdateUserActivity</a></h4>
+</td>
+<td>
+<p>This activity is just used to ensure that we have processed everything from our database that we need to prevent</p>
+<code><span class="keyword">class </span><span class="identifier">UpdateUserActivity</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">AppCompatActivity</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

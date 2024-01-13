@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <sg.edu.ntu.scse.cz2006.gymbuddies.widget.DotsView
+        android:id="@+id/vDotsView"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="center"/>
+
+    <sg.edu.ntu.scse.cz2006.gymbuddies.widget.CircleView
+        android:id="@+id/vCircle"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="center"/>
+
+    <ImageView
+        android:id="@+id/ivHeart"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="center"
+        android:contentDescription="@string/gym_details_fav_icon_content_desc"
+        android:tintMode="src_atop"
+        android:tint="#FF0000"
+        app:srcCompat="@drawable/ic_heart_empty"/>
+
+</merge>

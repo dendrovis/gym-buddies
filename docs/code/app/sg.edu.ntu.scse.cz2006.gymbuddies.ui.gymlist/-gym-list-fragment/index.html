@@ -1,0 +1,225 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>GymListFragment - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">sg.edu.ntu.scse.cz2006.gymbuddies.ui.gymlist</a>&nbsp;/&nbsp;<a href="./index.html">GymListFragment</a><br/>
+<br/>
+<h1>GymListFragment</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">GymListFragment</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Fragment</span><span class="symbol">, </span><span class="identifier">ISwipeCallback</span></code>
+<p>The fragment handling the viewing of just the favourited gyms of the user</p>
+<p><strong>Author</strong><br/>
+Kenneth Soh</p>
+<p><strong>Since</strong><br/>
+2019-10-03</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>The fragment handling the viewing of just the favourited gyms of the user</p>
+<code><span class="identifier">GymListFragment</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="back-stack.html">backStack</a></h4>
+</td>
+<td>
+<p>Callback handler for Jetpack Navigation back override</p>
+<code><span class="keyword">var </span><span class="identifier">backStack</span><span class="symbol">: </span><span class="identifier">OnBackPressedCallback</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="coordinates.html">coordinates</a></h4>
+</td>
+<td>
+<p>The coordinates of the selected gym</p>
+<code><span class="keyword">var </span><span class="identifier">coordinates</span><span class="symbol">: </span><span class="identifier">LatLng</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="coordinator-layout.html">coordinatorLayout</a></h4>
+</td>
+<td>
+<p>The coordinator layout handling the fragment</p>
+<code><span class="keyword">var </span><span class="identifier">coordinatorLayout</span><span class="symbol">: </span><span class="identifier">CoordinatorLayout</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="details-init.html">detailsInit</a></h4>
+</td>
+<td>
+<p>Flag to determine if we are initializing the details view when the gym details bottom sheet appears</p>
+<code><span class="keyword">var </span><span class="identifier">detailsInit</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="fav-adapter.html">favAdapter</a></h4>
+</td>
+<td>
+<p>An adapter to store the favourites list for the RecyclerView</p>
+<code><span class="keyword">var </span><span class="identifier">favAdapter</span><span class="symbol">: </span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.adapter/-fav-gym-adapter/index.html"><span class="identifier">FavGymAdapter</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="fav-listener.html">favListener</a></h4>
+</td>
+<td>
+<p>Firebase Firestore Favourites List Real-time listener</p>
+<code><span class="keyword">var </span><span class="identifier">favListener</span><span class="symbol">: </span><span class="identifier">ListenerRegistration</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="favourites-list.html">favouritesList</a></h4>
+</td>
+<td>
+<p>The favourites list recyclerview</p>
+<code><span class="keyword">var </span><span class="identifier">favouritesList</span><span class="symbol">: </span><span class="identifier">RecyclerView</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="flag-reviewing.html">flagReviewing</a></h4>
+</td>
+<td>
+<p>If the user is currently reviewing a gym</p>
+<code><span class="keyword">var </span><span class="identifier">flagReviewing</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="gym-bottom-sheet.html">gymBottomSheet</a></h4>
+</td>
+<td>
+<p>The gym details bottom sheet</p>
+<code><span class="keyword">var </span><span class="identifier">gymBottomSheet</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="gym-detail-fav-listener.html">gymDetailFavListener</a></h4>
+</td>
+<td>
+<p>The Firebase Firestore listener for favourites in the gym details bottom sheet This is used to handle real time updates to the favourites count of the gym</p>
+<code><span class="keyword">var </span><span class="identifier">gymDetailFavListener</span><span class="symbol">: </span><span class="identifier">ListenerRegistration</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="gym-list-view-model.html">gymListViewModel</a></h4>
+</td>
+<td>
+<p>The Fragment View Model as per MVVM architecture</p>
+<code><span class="keyword">var </span><span class="identifier">gymListViewModel</span><span class="symbol">: </span><a href="../-gym-list-view-model/index.html"><span class="identifier">GymListViewModel</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="reviews.html">reviews</a></h4>
+</td>
+<td>
+<p>Gym Reviews recyclerview</p>
+<code><span class="keyword">var </span><span class="identifier">reviews</span><span class="symbol">: </span><span class="identifier">RecyclerView</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="swipe-to-refresh.html">swipeToRefresh</a></h4>
+</td>
+<td>
+<p>Swipe Refresh Listener</p>
+<code><span class="keyword">var </span><span class="identifier">swipeToRefresh</span><span class="symbol">: </span><span class="identifier">SwipeRefreshLayout</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-t-a-g.html">TAG</a></h4>
+</td>
+<td>
+<p>Debug tag for logging purposes</p>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">TAG</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="delete.html">delete</a></h4>
+</td>
+<td>
+<p>When a gym in the favourites list has been swiped to unfavourite</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">delete</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.gymlist.GymListFragment$delete(kotlin.Int)/position">position</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="empty-favourites.html">emptyFavourites</a></h4>
+</td>
+<td>
+<p>Internal function to call when the user has no favourited gyms</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">emptyFavourites</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-create-view.html">onCreateView</a></h4>
+</td>
+<td>
+<p>Internal lifecycle fragment for creating the fragment view</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onCreateView</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.gymlist.GymListFragment$onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)/inflater">inflater</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/LayoutInflater.html"><span class="identifier">LayoutInflater</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.gymlist.GymListFragment$onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)/container">container</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/ViewGroup.html"><span class="identifier">ViewGroup</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.gymlist.GymListFragment$onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)/savedInstanceState">savedInstanceState</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/Bundle.html"><span class="identifier">Bundle</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-pause.html">onPause</a></h4>
+</td>
+<td>
+<p>Lifecycle event called when the fragment is paused</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onPause</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-resume.html">onResume</a></h4>
+</td>
+<td>
+<p>Lifecycle event called when the fragment is resumed</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onResume</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="process-fav-list-updates.html">processFavListUpdates</a></h4>
+</td>
+<td>
+<p>Process real-time updates from Firebase Firestore</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">processFavListUpdates</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.gymlist.GymListFragment$processFavListUpdates(com.google.firebase.firestore.QuerySnapshot)/querySnapshot">querySnapshot</span><span class="symbol">:</span>&nbsp;<span class="identifier">QuerySnapshot</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-gym-status.html">setGymStatus</a></h4>
+</td>
+<td>
+<p>Internal function to set the logged in user's gym review status This will determine if the user has a review for that particular gym or not. If there is, the view review layout is used, otherwise the create new review layout is used</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setGymStatus</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.gymlist.GymListFragment$setGymStatus(kotlin.Boolean, kotlin.String, kotlin.Float, kotlin.String)/hasReview">hasReview</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.gymlist.GymListFragment$setGymStatus(kotlin.Boolean, kotlin.String, kotlin.Float, kotlin.String)/message">message</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.gymlist.GymListFragment$setGymStatus(kotlin.Boolean, kotlin.String, kotlin.Float, kotlin.String)/rating">rating</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html"><span class="identifier">Float</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.gymlist.GymListFragment$setGymStatus(kotlin.Boolean, kotlin.String, kotlin.Float, kotlin.String)/selectedGymUid">selectedGymUid</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="submit-review.html">submitReview</a></h4>
+</td>
+<td>
+<p>Internal function to submit review for the selected gym</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">submitReview</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.gymlist.GymListFragment$submitReview(me.zhanghai.android.materialratingbar.MaterialRatingBar, com.google.android.material.textfield.TextInputEditText, kotlin.String)/bar">bar</span><span class="symbol">:</span>&nbsp;<span class="identifier">MaterialRatingBar</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.gymlist.GymListFragment$submitReview(me.zhanghai.android.materialratingbar.MaterialRatingBar, com.google.android.material.textfield.TextInputEditText, kotlin.String)/reviewMessage">reviewMessage</span><span class="symbol">:</span>&nbsp;<span class="identifier">TextInputEditText</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.gymlist.GymListFragment$submitReview(me.zhanghai.android.materialratingbar.MaterialRatingBar, com.google.android.material.textfield.TextInputEditText, kotlin.String)/selectedGymUid">selectedGymUid</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="update-gym-ratings.html">updateGymRatings</a></h4>
+</td>
+<td>
+<p>Internal function to update gym ratings for a selected gym</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">updateGymRatings</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.gymlist.GymListFragment$updateGymRatings(kotlin.String)/selectedGymUid">selectedGymUid</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

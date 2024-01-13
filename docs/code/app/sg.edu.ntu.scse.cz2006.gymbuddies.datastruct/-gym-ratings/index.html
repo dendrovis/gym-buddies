@@ -1,0 +1,61 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>GymRatings - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">sg.edu.ntu.scse.cz2006.gymbuddies.datastruct</a>&nbsp;/&nbsp;<a href="./index.html">GymRatings</a><br/>
+<br/>
+<h1>GymRatings</h1>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">GymRatings</span></code>
+<p>This is used to display Gym Ratings in a RecyclewView, will make use of the <a href="../-firestore-rating/index.html">FirestoreRating</a> object to store the reviews itself
+For sg.edu.ntu.scse.cz2006.gymbuddies.datastruct in Gym Buddies!</p>
+<p><strong>Author</strong><br/>
+Kenneth Soh</p>
+<p><strong>Since</strong><br/>
+2019-10-12</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Returns the review and rating of a particular gym by a particular user</p>
+<code><span class="identifier">GymRatings</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.GymRatings$<init>(kotlin.String, sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.FirestoreRating, sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.User)/user">user</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;""<span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.GymRatings$<init>(kotlin.String, sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.FirestoreRating, sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.User)/ratingObj">ratingObj</span><span class="symbol">:</span>&nbsp;<a href="../-firestore-rating/index.html"><span class="identifier">FirestoreRating</span></a>&nbsp;<span class="symbol">=</span>&nbsp;FirestoreRating()<span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.GymRatings$<init>(kotlin.String, sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.FirestoreRating, sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.User)/userObj">userObj</span><span class="symbol">:</span>&nbsp;<a href="../-user/index.html"><span class="identifier">User</span></a>&nbsp;<span class="symbol">=</span>&nbsp;User()<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="rating-obj.html">ratingObj</a></h4>
+</td>
+<td>
+<p>FirestoreRating Review object</p>
+<code><span class="keyword">val </span><span class="identifier">ratingObj</span><span class="symbol">: </span><a href="../-firestore-rating/index.html"><span class="identifier">FirestoreRating</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="user.html">user</a></h4>
+</td>
+<td>
+<p>String User whose review is being shown</p>
+<code><span class="keyword">val </span><span class="identifier">user</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="user-obj.html">userObj</a></h4>
+</td>
+<td>
+<p>User User's object (MUST MATCH <a href="user.html">user</a>)</p>
+<code><span class="keyword">val </span><span class="identifier">userObj</span><span class="symbol">: </span><a href="../-user/index.html"><span class="identifier">User</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

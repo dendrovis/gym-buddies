@@ -1,0 +1,130 @@
+# openjdk:8-jdk-alpine image needed
+.build_before_alpine: &buildbeforealpine
+  before_script:
+    - export GRADLE_USER_HOME=`pwd`/.gradle
+    - cd $CI_PROJECT_DIR
+    - chmod +x ./gradlew
+
+# Actual CI Script
+image: alpine
+
+include:
+  - template: Code-Quality.gitlab-ci.yml
+  - template: SAST.gitlab-ci.yml
+
+variables:
+  ANDROID_COMPILE_SDK: "28"
+  ANDROID_BUILD_TOOLS: "28.0.3"
+  ANDROID_SDK_TOOLS:   "4333796"
+  GIT_SUBMODULE_STRATEGY: recursive
+  ANDROID_HOME: "/usr/local/android-sdk"
+
+stages:
+  - Build Or Test
+  - Deployment
+
+code_quality:
+  stage: Build Or Test
+  artifacts:
+    reports:
+      codequality: gl-code-quality-report.json
+    paths: [gl-code-quality-report.json]
+    expire_in: 1 week
+
+sast:
+  stage: Build Or Test
+  before_script:
+    - chmod +x ./gradlew
+  variables:
+    FAIL_NEVER: 1
+
+Assemble Android App:
+  image: itachi1706/android-alpine-sdk
+  stage: Build Or Test
+  <<: *buildbeforealpine
+  script:
+    - cat $GOOGLE_SERVICES > ./app/google-services.json
+    - ./gradlew assembleDebug
+  after_script:
+    - rm -f .gradle/caches/modules-2/modules-2.lock
+    - rm -fr .gradle/caches/*/plugin-resolution/
+  artifacts:
+    paths:
+      - app/build/outputs/
+  cache: # Cache GL
+    key: ${CI_COMMIT_REF_SLUG}
+    paths:
+      - .gradle/caches
+      - .gradle/wrapper
+
+Generate Debug APK:
+  image: itachi1706/android-alpine-sdk
+  stage: Build Or Test
+  <<: *buildbeforealpine
+  script:
+    - echo $DEBUG_KEYSTORE | base64 -d > debug.keystore
+    - cat $GOOGLE_SERVICES > ./app/google-services.json
+    - ./gradlew assembleRelease -Pandroid.injected.signing.store.file=$(pwd)/debug.keystore -Pandroid.injected.signing.store.password=$KEYSTORE_PASSWORD -Pandroid.injected.signing.key.alias=$KEY_ALIAS -Pandroid.injected.signing.key.password=$KEY_PASSWORD
+  artifacts:
+    paths:
+      - app/build/outputs/apk/release
+
+Generate Javadocs Documentation:
+  image: itachi1706/android-alpine-sdk
+  stage: Build Or Test
+  <<: *buildbeforealpine
+  script:
+    - echo $DEBUG_KEYSTORE | base64 -d > debug.keystore
+    - cat $GOOGLE_SERVICES > ./app/google-services.json
+    - ./gradlew dokka
+  artifacts:
+    paths:
+      - javadoc/
+
+Update Javadocs:
+  stage: Deployment
+  cache: {}
+  script:
+    - echo "Deploying to JavaDocs Repo"
+    - echo "Installing Dependencies"
+    - apk update && apk --no-cache add git
+    - echo "Configuring Dependencies"
+    - git config --global user.name "SE GitLab CI"
+    - git config --global user.email "gitlabci@itachi1706.com"
+    - echo "Cloning Repository"
+    - git clone https://${GITHUB_USER}:${GITHUB_PAT}@github.com/itachi1706/How-to-use-Git-NTUSCSE1819-Site.git jdocs
+    - cd jdocs
+    - git pull
+    - echo "Ensuring that files are cleaned"
+    - mkdir -p projects/se/html
+    - cd projects/se/html
+    - rm -rf ./*
+    - cd ../../../../
+    - echo "Copying Javadocs" # Our deploying site
+    - cp -r ./javadoc/* ./jdocs/projects/se/html/
+    - cd jdocs
+    - echo "Viewing Git Status"
+    - git status
+    - echo "Committing"
+    - git add -A
+    - "git commit -m \"Automated GitLab Build #${CI_PIPELINE_IID} from Pipelines for ${CI_JOB_NAME}. View the build at ${CI_PIPELINE_URL}!\""
+    - echo "Pushing to Git"
+    - git push
+  dependencies: [Generate Javadocs Documentation]
+  allow_failure: true
+  only:
+    - master
+
+
+Send To Telegram:
+  stage: Deployment
+  dependencies: [Generate Debug APK]
+  when: manual
+  before_script:
+    - apk add --no-cache curl
+    - mv app/build/outputs/apk/release/app-release.apk GymBuddy.apk
+  script: 
+    - curl -s -X POST https://api.telegram.org/bot$TGBOT_TOKEN/sendMessage -d chat_id=$CHAT_ID -d text="***CI BUILD $CI_PIPELINE_IID ($CI_COMMIT_SHA)***%0A%0A***$CI_COMMIT_TITLE***%0A$CI_COMMIT_DESCRIPTION" -d parse_mode=markdown
+    - curl -F chat_id="$CHAT_ID" -F document=@"GymBuddy.apk" https://api.telegram.org/bot$TGBOT_TOKEN/sendDocument
+  after_script:
+    -  curl -s -X POST https://api.telegram.org/bot$TGBOT_TOKEN/sendMessage -d chat_id=$CHAT_ID --data-urlencode text="$(cat meeting.MD)" -d parse_mode=markdown
